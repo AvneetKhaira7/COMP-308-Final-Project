@@ -62,6 +62,7 @@ app.use('/', index); // top level links
 app.use('/games', games); // games links - start with /games
 app.use('/users', users); // users links - start with /users
 
+
 // Passport User Configuration
 let UserModel = require('./models/users');
 let User = UserModel.User; // alias for the User Model - User object

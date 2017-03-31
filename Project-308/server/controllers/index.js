@@ -2,10 +2,11 @@
 module.exports.DisplayHome = (req, res) => {
   res.render('content/index', {
     title: 'Home',
-    games: '',
     displayName: req.user ? req.user.displayName : ''
    });
 }
+
+
 
 // Displays the Contact Page
 module.exports.DisplayContact = (req, res) => {
