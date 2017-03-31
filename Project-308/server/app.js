@@ -28,7 +28,7 @@ db.once('open', () => {
 
 // define routers
 let index = require('./routes/index'); // top level routes
-let games = require('./routes/games'); // routes for games
+let games = require('./routes/games'); // routes for surveys
 let users = require('./routes/users'); // routes for users and auth
 
 let app = express();
