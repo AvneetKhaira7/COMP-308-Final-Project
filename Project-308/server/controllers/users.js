@@ -17,14 +17,14 @@ module.exports.DisplayLogin = (req, res) => {
     });
     return;
   } else {
-    return res.redirect('/contact'); // redirect to games list
+    return res.redirect('/dashboard'); // redirect to games list
   }
 }
 
 // Processes the Login Request
 module.exports.ProcessLogin = () => {
   return passport.authenticate('local', {
-  successRedirect: '/index',
+  successRedirect: '/dashboard',
   failureRedirect: '/users/login',
   failureFlash: true
 })
@@ -43,7 +43,7 @@ module.exports.DisplayRegistration = (req, res) => {
     });
     return;
   } else {
-    return res.redirect('/contact'); // redirect to games list
+    return res.redirect('/dashboard'); // redirect to dashboard
   }
 }
 
@@ -72,7 +72,7 @@ module.exports.ProcessRegistration = (req, res) => {
       }
       // if registration is successful
       return passport.authenticate('local')(req, res, ()=>{
-        res.redirect('/contact');
+        res.redirect('/dashboard');
       });
     });
 }

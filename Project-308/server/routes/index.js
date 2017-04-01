@@ -16,9 +16,9 @@ router.get('/login', (req, res, next) => {
   userController.DisplayLogin(req, res);
 });
 
-/* GET contact page. */
-router.get('/contact', (req, res, next) => {
-  indexController.DisplayContact(req, res);
+/* GET Dashboard page. */
+router.get('/dashboard', (req, res, next) => {
+  //indexController.DisplayDashboard(req, res);
 });
 
 module.exports = router;
