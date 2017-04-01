@@ -50,13 +50,25 @@
                 <!-- notificatoin dropdown start
                <a href="/login" class="lite" ><i class="fa fa-sign-in fa-lg">
             </i> Login</a>-->
+            <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <% if(typeof displayName == 'string' && displayName) { %>
+                            <span class="username">Welcome, <%= displayName %></span>
+                            <b class="caret"></b>
+                        </a>
+                        <% } %>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a href="/users/logout"><i class="icon_mail_alt"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
 
-        <% if(typeof displayName == 'string' && displayName) { %>
-          <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= displayName %></li>
-          <li><a href="/users/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-        <% } else { %>
-          <li><a href="/users/login"><i class="fa fa-sign-in"></i> Login</a></li>
-        <% } %>
+        
             </div>
  
       </header>      

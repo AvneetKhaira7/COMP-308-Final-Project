@@ -9,9 +9,9 @@ module.exports.DisplayHome = (req, res) => {
 
 
 // Displays the Contact Page
-module.exports.DisplayContact = (req, res) => {
-  res.render('content/contact', {
-    title: 'Contact',
+module.exports.DisplayDashboard = (req, res) => {
+  res.render('content/dashboard', {
+    title: 'Dashboard',
     games: '',
     displayName: req.user ? req.user.displayName : ''
    });
