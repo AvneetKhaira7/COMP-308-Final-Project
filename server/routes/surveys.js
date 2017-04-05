@@ -6,7 +6,7 @@ let router = express.Router();
 let surveyController = require('../controllers/survey');
 
 // GET /login - render the login view
-router.get('/surveys', (req, res, next)=>{
+router.get('/', (req, res, next)=>{
   surveyController.DisplayAdd(req, res);
   // POST /login - process the login attempt
 })
