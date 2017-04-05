@@ -11,7 +11,7 @@ module.exports.ReadSurveyList = (req, res) => {
       return console.error(err);
     }
     else {
-      res.render('surveys/index', {
+      res.render('survey/index', {
         title: 'Surveys',
         surveys: surveys,
         displayName: req.user.displayName
@@ -22,10 +22,10 @@ module.exports.ReadSurveyList = (req, res) => {
 
 // displays the Details page - allowing users to add a new Survey
 module.exports.DisplayAdd = (req, res) => {
-  res.render('survey/details', {
-    title: "Add a new Survey",
+  res.render('content/dashboard', {
+    title: "dashboard",
     surveys: '',
-    displayName: req.user.displayName
+    displayName: req.user ? req.user.displayName : ''
   });
 }
 

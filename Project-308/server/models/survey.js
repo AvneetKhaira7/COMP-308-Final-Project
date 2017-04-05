@@ -32,7 +32,7 @@ survey_AvailableOn: {
     trim: true    
   }, 
   survey_active:{
-type:boolean,
+type:Boolean,
 default:false
   },
   created: {
