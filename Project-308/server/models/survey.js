@@ -31,7 +31,7 @@ survey_AvailableOn: {
     default: Date.now,
     trim: true    
   }, 
-  survey_status:{
+  survey_active:{
 type:boolean,
 default:false
   },
