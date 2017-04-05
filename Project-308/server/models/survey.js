@@ -52,4 +52,4 @@ let options = ({missingDescriptionError: "Please enter description"});
 
 SurveySchema.plugin(passportLocalMongoose, options);
 
-exports.User = mongoose.model('survey', SurveySchema);
+exports.Survey = mongoose.model('survey', SurveySchema);
