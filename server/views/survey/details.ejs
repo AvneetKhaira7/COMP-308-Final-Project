@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="NameTextField">Name</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Game Name" name="name" value="<%= games.name %>" required>
+              </div>
+              <div class="form-group">
+                <label for="CostTextField">Cost</label>
+                <input type="text" class="form-control" id="CostTextField"
+                placeholder="Game Cost" name="cost" value="<%= games.cost %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="RatingTextField">Rating</label>
+                <input type="text" class="form-control" id="RatingTextField"
+                placeholder="Game Rating" name="rating" value="<%= games.rating %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/games" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>

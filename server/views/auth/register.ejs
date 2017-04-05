@@ -1,0 +1,42 @@
+<% include ../partials/head.ejs %>
+
+                <div class="container">
+                <!-- Display flash messages start -->
+	            <% if (messages.length > 0) { %>
+                    <div class="alert alert-danger"><%= messages %></div>
+                <% } %>
+                 <!-- Display flash messages end -->
+                   <div class="row">
+						<div class="col-md-offset-4 col-md-4">
+                            <br>
+							<h3>User Registration</h3>
+							<form method="post">
+								<fieldset class="form-group">
+									<label class="design" for="email">Email: *</label>
+									<input name="email" type="email" class="form-control" style="color:white" required autofocus />
+								</fieldset>
+								<fieldset class="form-group">
+									<label class="design" for="username">Username: *</label>
+									<input name="username" type="text" class="form-control" style="color:white" required />
+								</fieldset>
+								<fieldset class="form-group">
+									<label class="design" for="password">Password: *</label>
+									<input name="password" type="password" class="form-control" style="color:white" required />
+								</fieldset>
+								<fieldset class="form-group">
+									<label class="design" for="displayName">Display Name: *</label>
+									<input name="displayName" type="text" class="form-control" style="color:white" required />
+								</fieldset>
+								<fieldset class="form-group text-right">
+									<input type="submit" class="btn btn-success" value="Submit"/>
+									<a href="/">
+										<input type="button" class="btn btn-warning" value="Cancel"/>
+									</a>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</header>
+            
+<% include ../partials/foot.ejs %>

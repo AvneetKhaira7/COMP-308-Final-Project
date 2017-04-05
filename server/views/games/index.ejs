@@ -1,0 +1,41 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h3>Games List </h3>
+          <a href="/games/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a Game</a>
+          <br>
+          <table class="table table-bordered table-striped table-hover">
+            <tr>
+              <th class="text-center">Name</th>
+              <th class="text-center">Cost</th>
+              <th class="text-center">Rating</th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+            </tr>
+            <!-- Template Row -->
+            <% for (let count = 0; count < games.length; count++) { %>
+            <tr>
+              <td class="text-center"><%= games[count].name %></td>
+              <td class="text-center"><%= games[count].cost %></td>
+              <td class="text-center"><%= games[count].rating %></td>
+              <td class="text-center">
+              <a href="/games/<%= games[count]._id %>" class="btn btn-primary">
+              <i class="fa fa-pencil-square-o"></i> Edit</a>
+               </td>
+              <td class="text-center">
+              <a href="/games/delete/<%= games[count]._id %>" class="btn btn-danger">
+              <i class="fa fa-trash-o"></i> Delete</a>
+              </td>
+            </tr>
+            <% } %>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
+
+
