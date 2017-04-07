@@ -16,6 +16,6 @@ module.exports.DisplayDashboard = (req, res) => {
     });
     return;
   } else {
-    return res.redirect('/dashboard'); // redirect to games list
+    return res.redirect('/dashboard'); // redirect to dashboard
   }
 }
