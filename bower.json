@@ -1,0 +1,30 @@
+{
+  "name": "comp308-final-project",
+  "description": "## Welcome the final Project for COMP 308",
+  "main": "server.js",
+  "authors": [
+    "Avneet Kaur",
+    "Taranjit Kaur",
+    "Vishavdeep Kaur"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "EJS"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/Scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
