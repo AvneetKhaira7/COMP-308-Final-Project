@@ -13,8 +13,8 @@ router.get('/home', (req, res, next)=>{
 
 
 // GET /login - render the login view
-router.get('/createnew', (req, res, next)=>{
-  surveyController.DisplayCreate(req, res);
+router.get('/created', (req, res, next)=>{
+  surveyController.DisplayCreated(req, res);
   // POST /login - process the login attempt
 })
 

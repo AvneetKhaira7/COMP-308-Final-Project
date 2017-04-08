@@ -4,21 +4,49 @@
         <div class="modal-content">
              <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Create survey from scratch</h4>
+            <h4 class="modal-title">Create survey for Short answers. Enter your questions</h4>
             </div>
             <div class="modal-body">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Add a Question
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" onclick="createTextBox()">Mutiple choice</button>
-                        <button class="dropdown-item" type="button">Short Answer</button>
-                        <button class="dropdown-item" type="button">Ratings</button>
+                    <form class="form" method="post">
+                    <div class="form-group">
+                     <label for="q1TextField">Q1</label>
+                        <input type="text" class="form-control" id="q1TextField"
+                     placeholder="Question 1" name="q1" value="" required>
                     </div>
+                    <div class="form-group">
+                         <label for="q2TextField">Q2</label>
+                        <input type="text" class="form-control" id="q2TextField"
+                     placeholder="Question 2" name="q2" value="" required>
                     </div>
+              <div class="form-group">
+               <label for="q3TextField">Q3</label>
+                        <input type="text" class="form-control" id="q3TextField"
+                     placeholder="Question 3" name="q3" value="" required>
+              </div>
+              <div class="form-group">
+               <label for="q4TextField">Q4</label>
+                        <input type="text" class="form-control" id="q4TextField"
+                     placeholder="Question 4" name="q4" value="" required>
+              </div>
+              <div class="form-group">
+               <label for="q5TextField">Q5</label>
+                        <input type="text" class="form-control" id="q5TextField"
+                     placeholder="Question 5" name="q5" value="" required>
+              </div>
+              <div class="form-group">
+              <label for="radioBtn">Is this survey active?</label>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio">No</label>
+                    </div>
+              </div>
+               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+             
+            </form>
                 </div>
             </div>
             </div>
@@ -33,38 +61,59 @@
 <!-- POPUP FOR CHOOSE EXISITNG -->
 <div id="myModal1" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-content">
+       
+             <div class="modal-content">
              <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Choose the following template</h4>
+            <h4 class="modal-title">Create survey for Rating on a scale of 1 to 5. Enter your questions</h4>
             </div>
             <div class="modal-body">
-            <form class="form" method="post">
-             <div class="form-group">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="radio">
-                            <label><input type="radio" name="wedadio">Website Survey</label>
-                            </div>
-                            <div class="radio">
-                            <label><input type="radio" name="eduradio">Education Survey</label>
-                            </div>
-                        </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form" method="post">
+                    <div class="form-group">
+                     <label for="q1TextField">Q1</label>
+                        <input type="text" class="form-control" id="q1TextField"
+                     placeholder="Question 1" name="q1" value="" required>
                     </div>
-                 </div>
-            </div>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                 
-            <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-             &nbsp; &nbsp;  <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-            </form>
-           
-        </div>
+                    <div class="form-group">
+                         <label for="q2TextField">Q2</label>
+                        <input type="text" class="form-control" id="q2TextField"
+                     placeholder="Question 2" name="q2" value="" required>
+                    </div>
+              <div class="form-group">
+               <label for="q3TextField">Q3</label>
+                        <input type="text" class="form-control" id="q3TextField"
+                     placeholder="Question 3" name="q3" value="" required>
+              </div>
+              <div class="form-group">
+               <label for="q4TextField">Q4</label>
+                        <input type="text" class="form-control" id="q4TextField"
+                     placeholder="Question 4" name="q4" value="" required>
+              </div>
+              <div class="form-group">
+               <label for="q5TextField">Q5</label>
+                        <input type="text" class="form-control" id="q5TextField"
+                     placeholder="Question 5" name="q5" value="" required>
+              </div>
+              <div class="form-group">
+              <label for="radioBtn">Is this survey active?</label>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio">No</label>
+                    </div>
+              </div>
+               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
              
+            </form>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>

@@ -30,9 +30,9 @@ module.exports.DisplayAdd = (req, res) => {
 }
 
 // displays the create from scratch page - allowing users to add a new Survey
-module.exports.DisplayCreate = (req, res) => {
-  res.render('content/create', {
-    title: "Create Survey",
+module.exports.DisplayCreated = (req, res) => {
+  res.render('content/created', {
+    title: "My Survey",
     surveys: '',
     displayName: req.user ? req.user.displayName : ''
   });
@@ -62,9 +62,9 @@ module.exports.CreateSurvey = (req, res) => {
     });
 }
 
-// Displays the Details page to Update a Survey
+// Displays the Survey to take it
 // find the survey by id and populate the form
-module.exports.DisplayEdit = (req, res) => {
+module.exports.DisplaySurvey = (req, res) => {
   try {
       // get a reference to the id from the url
       let id = mongoose.Types.ObjectId.createFromHexString(req.params.id);
