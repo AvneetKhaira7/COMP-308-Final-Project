@@ -57,3 +57,25 @@ module.exports.CreateSurvey = (req, res) => {
       }
     });
 }
+module.exports.CreateSurveyQuestions= (req,res) => {
+  /*
+* edit ids here
+*/
+
+  let newQuestion = question({
+      "surveyId": req.body.name,
+      "question_Description": req.body.cost,
+      "question_type": req.body.rating,
+      "question_OptionsCount":''
+    });
+
+    question.create(newQuestion, (err, question) => {
+      if(err) {
+        console.log(err);
+        res.end(err);
+      } else {
+        res.redirect('/surveys');// redirect path
+      }
+    });
+
+}

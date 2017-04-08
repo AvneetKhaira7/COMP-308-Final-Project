@@ -9,17 +9,21 @@ let QuestionsSchema = new Schema({
     default: '',
     trim: true    
   },
+  question_UserId: {
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'User'
+  },
    question_Description: {
     type: String,
     default: '',
     trim: true,
     required: 'question description is required'
   },
-  question_UserId: {
-    type: String,
-    default: '',
-    trim: true    
-  },
+  // question_UserId: {
+  //   type: String,
+  //   default: '',
+  //   trim: true    
+  // },
 question_type: {
     type: int,
     default: 0,
@@ -44,6 +48,6 @@ question_type: {
 
 let options = ({missingDescriptionError: "Please enter question"});
 
-SurveySchema.plugin(passportLocalMongoose, options);
+QuestionsSchema.plugin(passportLocalMongoose, options);
 
 exports.Questions = mongoose.model('questions', QuestionsSchema);
