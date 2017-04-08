@@ -1,0 +1,48 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+        <br>
+        <br>
+        <br>
+         <br>
+          <table class="table table-hover">
+            <tr class="text-center">           
+                <h1><span class="label label-default" style="color:black">Survey Name</span></h1>             
+            </tr>
+            <br>
+             <br>
+             
+            <tr class="text-center">
+                <div class="input-group" >
+                
+                <input type="text" class="form-control" placeholder="survey name" aria-describedby="basic-addon1">
+                </div>       
+            </tr>
+            <br>
+            <br>
+            <tr>
+              <td class="text-center">
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create from Scratch</button>
+             <!--   
+                <a href="#" class="btn btn-info" data-popup-open="popup-1" role="button">
+                <i class="fa fa-pencil-square-o"></i> Create from Scratch</a> 
+                -->
+                </td>
+                <td class="text-center">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Choose Existing</button>
+              
+                </td>
+                <% include ../partials/createscratchpopup.ejs %>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+<% include ../partials/footer.ejs %>
+
+

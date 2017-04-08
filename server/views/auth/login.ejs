@@ -1,0 +1,33 @@
+
+<% include ../partials/head.ejs %>
+
+            <div class="container">                 
+					<% if (messages.length > 0) { %>
+					<div class="alert alert-danger"><%= messages %></div>
+						<% } %>
+					  <div class="row">
+						<div class="col-md-offset-4 col-md-4">
+						   <h3>Please Login</h3>
+						   <form method="post">
+								<fieldset class="form-group">
+                                    <label class="design" for="username">Username: *</label>
+									<input name="username" type="text" class="form-control" style="color:white" required autofocus />
+								 </fieldset>
+								 <fieldset class="form-group">
+									<label class="design" for="password">Password:</label>
+									<input name="password" type="password" class="form-control" style="color:white" required />		
+								 <a style="color:white" href="/users/register">Or Register Here</a>
+								</fieldset>
+								<fieldset class="form-group text-right">
+									<input type="submit" class="btn btn-success" value="Log In"/>
+									<a href="/">
+										<input type="button" class="btn btn-warning" value="Cancel"/>
+									</a>
+							   </fieldset>
+							</form>
+						 </div>
+					</div>			 
+				</div>
+			</header>
+
+<% include ../partials/foot.ejs %>
