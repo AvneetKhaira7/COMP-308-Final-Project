@@ -133,3 +133,47 @@ module.exports.DeleteSurvey = (req, res) => {
       }
     });
 }
+/*
+* new code Taran
+*/
+/*
+* edit ids here
+*/
+module.exports.CreateSurvey = (req, res) => {
+  let newSurvey = survey({
+      "surveyName": req.body.name,
+      "survey_Description": req.body.cost,
+      "survey_UserId": req.body.rating
+    });
+
+    survey.create(newSurvey, (err, survey) => {
+      if(err) {
+        console.log(err);
+        res.end(err);
+      } else {
+        res.redirect('/surveys');
+      }
+    });
+}
+module.exports.CreateSurveyQuestions= (req,res) => {
+  /*
+* edit ids here
+*/
+
+  let newQuestion = question({
+      "surveyId": req.body.name,
+      "question_Description": req.body.cost,
+      "question_type": req.body.rating,
+      "question_OptionsCount":''
+    });
+
+    question.create(newQuestion, (err, question) => {
+      if(err) {
+        console.log(err);
+        res.end(err);
+      } else {
+        res.redirect('/surveys');// redirect path
+      }
+    });
+
+}
