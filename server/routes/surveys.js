@@ -11,11 +11,13 @@ router.get('/home', (req, res, next)=>{
   // POST /login - process the login attempt
 })
 
+
 // GET /login - render the login view
 router.get('/createnew', (req, res, next)=>{
   surveyController.DisplayCreate(req, res);
   // POST /login - process the login attempt
 })
+
 
 
 module.exports = router;

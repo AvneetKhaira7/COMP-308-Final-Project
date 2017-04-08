@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "vsicons.presets.angular": false
+=======
+    "vsicons.presets.angular": true
+>>>>>>> origin/master
 }
