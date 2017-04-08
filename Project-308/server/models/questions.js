@@ -11,7 +11,8 @@ let QuestionsSchema = new Schema({
   },
   question_UserId: {
     type: mongoose.Schema.Types.ObjectId, 
-    ref: 'User'},
+    ref: 'User'
+  },
    question_Description: {
     type: String,
     default: '',
