@@ -12,4 +12,13 @@ router.get('/createsurvey', (req, res, next)=>{
 })
 
 
+//  GET the create survey  page in order to create a new survey
+router.get('/create', usersController.RequireAuth, (req, res, next) => {
+  surveyController.DisplayCreate(req, res);
+}).post('/create', usersController.RequireAuth, (req, res, next) => {
+  // POST process the survey Details page and create a new survey - CREATE
+  surveyController.CreateSurvey(req, res);
+});
+
+
 module.exports = router;
