@@ -9870,3 +9870,7 @@ span.customSelect.changed {
 
 }
 
+.form-inline{
+    display:inline-block;
+}
+

@@ -1,0 +1,46 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+          <h3>Survey Name: </h3>
+           <form class="form" method="post">
+                      <div class="form-group">
+                      <label for="q1TextField">Q1 from db</label>
+                          <input type="text" class="form-control" id="a1TextField"
+                      placeholder="Answer here" name="a1" value="" required>
+                      </div>
+                     <div class="form-group">
+                     <label for="q2TextField">Q2 from db</label>
+                         <input type="text" class="form-control" id="a2TextField"
+                     placeholder="Answer here" name="a2" value="" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="q3TextField">Q3 from db</label>
+                         <input type="text" class="form-control" id="a3TextField"
+                     placeholder="Answer here" name="a3" value="" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="q4TextField">Q4 from db</label>
+                         <input type="text" class="form-control" id="a4TextField"
+                     placeholder="Answer here" name="a4" value="" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="q5TextField">Q2 from db</label>
+                         <input type="text" class="form-control" id="a5TextField"
+                     placeholder="Answer here" name="a5" value="" required>
+                    </div>
+         
+          <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+           <!-- Redirect to my surveys or Dashboard -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>

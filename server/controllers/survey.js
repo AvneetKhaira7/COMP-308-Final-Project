@@ -38,6 +38,26 @@ module.exports.DisplayCreated = (req, res) => {
   });
 }
 
+// displays the create from scratch page - allowing users to add a new Survey
+module.exports.DisplayShortAnswers = (req, res) => {
+  res.render('survey/detailshort', {
+    title: "Survey Name",
+    surveys: '',
+    displayName: req.user ? req.user.displayName : ''
+  });
+}
+
+// displays the create from scratch page - allowing users to add a new Survey
+module.exports.DisplayRatingAnswers = (req, res) => {
+  res.render('survey/detailrating', {
+    title: "Survey Name",
+    surveys: '',
+    displayName: req.user ? req.user.displayName : ''
+  });
+}
+
+
+
 // Create a new survey and insert it into the db
 module.exports.CreateSurvey = (req, res) => {
   let newSurvey = survey({
