@@ -84,7 +84,5 @@ survey_question5:{
 {
   collection: "surveys"
 });
-
-
 exports.Survey = mongoose.model('Survey', SurveySchema);
 
