@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+          <h3>Survey Name: <%= surveys.surveyName %> </h3>
+                      <div class="form-group">
+                      <label for="q1TextField"><%= surveys.survey_question1 %></label>
+                      <label for="a1TextField"> Answer from db </label>
+                      </div>
+                     <div class="form-group">
+                      <label for="q2TextField"><%= surveys.survey_question1 %></label>
+                      <label for="a2TextField"> Answer from db </label>
+                      </div>
+                    <div class="form-group">
+                      <label for="q3TextField"><%= surveys.survey_question1 %></label>
+                      <label for="a3TextField"> Answer from db </label>
+                      </div>
+                    <div class="form-group">
+                      <label for="q4TextField"><%= surveys.survey_question1 %></label>
+                      <label for="a4TextField"> Answer from db </label>
+                      </div>
+                    <div class="form-group">
+                      <label for="q5TextField"><%= surveys.survey_question1 %></label>
+                      <label for="a5TextField"> Answer from db </label>
+                      </div>         
+         
+           <!-- Redirect to my surveys or Dashboard -->
+         
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
