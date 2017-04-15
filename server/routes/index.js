@@ -20,5 +20,8 @@ router.get('/login', (req, res, next) => {
 router.get('/dashboard', (req, res, next) => {
   indexController.DisplayDashboard(req, res);
 });
+router.get('/contactUs', (req, res, next) => {
+  indexController.DisplayContactUs(req, res);
+});
 
 module.exports = router;

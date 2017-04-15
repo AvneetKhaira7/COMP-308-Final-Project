@@ -16,3 +16,9 @@ module.exports.DisplayDashboard = (req, res) => {
     displayName: req.user ? req.user.displayName : ''
    });
 }
+module.exports.DisplayContactUs = (req, res) => {
+  res.render('content/contactUs', {
+    title: 'Contact Us',
+    displayName: req.user ? req.user.displayName : ''
+   });
+}
