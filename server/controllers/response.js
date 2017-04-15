@@ -29,9 +29,9 @@ module.exports.DisplayViewResponse = (req, res) => {
     }
     else {
        res.render('sresponse/view', {
-        title: 'Response',
-        
+        title: 'Response',        
         response: response,
+        count: response.count({surveyId:surveys}),
         displayName: req.user ? req.user.displayName : ''
       });
     }

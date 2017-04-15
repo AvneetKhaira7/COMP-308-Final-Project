@@ -14,7 +14,7 @@ module.exports.ReadSurveyList = (req, res) => {
     else {
       res.render('survey/index', {
         title: 'Surveys',
-        surveys: surveys,
+        surveys: surveys,        
         displayName: req.user.displayName
       });
     }
@@ -151,7 +151,7 @@ module.exports.CreateSurvey = (req, res) => {
   let newSurvey = survey({
       "surveyName": req.body.sname,
       "survey_Description": req.body.sdesc,
-    //  "createdBy": req.user ? req.user.id : '',// get user id 
+      "createdBy": req.user ? req.user.id : '',// get user id 
       "survey_question1":req.body.q1,
       "survey_question2":req.body.q2,
       "survey_question3":req.body.q3,

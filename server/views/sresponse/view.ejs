@@ -11,49 +11,49 @@
           <h3>Survey Name:  </h3>
             <input type="text" name="surveyId" value= '58f1ad7583af461c38c8220e'> 
                        <% for (let count = 0; count < response.length; count++) { %>
-                       <h3>Response <%= count+1 %></h3>
+                       <h3>Response <%= count+1 %> </h3>
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q1TextField">response.question1</label>
+                       <label for="q1TextField"><%= response[count].question1 %></label>
                       </li>
                       <li class="list-group-item">
-                      <label for="a1TextField"> Answer from db </label>
+                      <label for="a1TextField"> <%=response[count].answer1  %> </label>
                       </li>
                       </ul>
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q2TextField">response.question2</label>
+                       <label for="q2TextField"><%= response[count].question2 %> </label>
                       </li>
                       <li class="list-group-item">
-                      <label for="a2TextField"> Answer from db </label>
-                      </li>
-                      </ul>
-
-                      <ul class="list-group">
-                      <li class="list-group-item">
-                       <label for="q3TextField">response.question3</label>
-                      </li>
-                      <li class="list-group-item">
-                      <label for="a3TextField"> Answer from db </label>
+                      <label for="a2TextField"> <%=response[count].answer2  %> </label>
                       </li>
                       </ul>
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q4TextField">response.question4</label>
+                       <label for="q3TextField"><%= response[count].question3  %></label>
                       </li>
                       <li class="list-group-item">
-                      <label for="a4TextField"> Answer from db </label>
+                      <label for="a3TextField"> <%=response[count].answer3  %> </label>
                       </li>
                       </ul>
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q5TextField">response.question5</label>
+                       <label for="q4TextField"><%= response[count].question4  %></label>
                       </li>
                       <li class="list-group-item">
-                      <label for="a5TextField"> Answer from db </label>
+                      <label for="a4TextField"> <%=response[count].answer4  %> </label>
+                      </li>
+                      </ul>
+
+                      <ul class="list-group">
+                      <li class="list-group-item">
+                       <label for="q5TextField"><%= response[count].question5  %></label>
+                      </li>
+                      <li class="list-group-item">
+                      <label for="a5TextField"> <%=response[count].answer5  %> </label>
                       </li>
                       </ul>
                      <% } %>
