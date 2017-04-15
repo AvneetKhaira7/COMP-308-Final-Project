@@ -6,17 +6,17 @@
         <div class="col-md-offset-3 col-md-6">
         <br>
         <br>
-        
+        <br>
           <h3>Survey Name: <%= surveys.surveyName %></h3>
            <form class="form" method="post">
            <div class="form-check form-check-inline">
 
-<
+
                     <input type="hidden" name="q1" value="<%= surveys.survey_question1 %>">
 
                     <label for="q1TextField" style="height:20px"><%= surveys.survey_question1 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">1</label>                                  
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1" required>1</label>                                  
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">2</label>                            
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">3</label>                                      
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">4</label>
@@ -26,7 +26,7 @@
                 
                     <label for="q2TextField" style="height:20px"><%= surveys.survey_question2 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2" required>1</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">2</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">3</label>
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">4</label>
@@ -35,7 +35,7 @@
 
                     <label for="q3TextField" style="height:20px"><%= surveys.survey_question3 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3" required>1</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">2</label>
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">3</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">4</label>
@@ -44,7 +44,7 @@
 
                    <label for="q4TextField" style="height:20px"><%= surveys.survey_question4 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" required>1</label>
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">2</label>
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">3</label>
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">4</label>
@@ -53,11 +53,11 @@
 
                     <label for="q5TextField" style="height:20px"><%= surveys.survey_question5 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" required>1</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">2</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">3</label>
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">4</label>
->>>>>>> 87508d70cec52b5618f4248f30da7e2f531ea52b
+
                     </div>                
               </div>                                           
           <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
