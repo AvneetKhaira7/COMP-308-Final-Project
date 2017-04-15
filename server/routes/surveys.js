@@ -2,8 +2,9 @@
 let express = require('express');
 let router = express.Router();
 
-// require the users controller
+// require the survey controller
 let surveyController = require('../controllers/survey');
+let responseController = require('../controllers/response');
 
 // GET /login - render the home view
 router.get('/home', (req, res, next)=>{
@@ -25,11 +26,15 @@ router.get('/created', (req, res, next)=>{
 router.get('/details_short/:id', (req, res, next) => {
    
     surveyController.TakeShortAnswersSurvey(req, res);
+}).post('/details_short/:id', (req, res, next) => { 
+   responseController.CreateResponseForShortAnswers(req,res);
 });
 
 router.get('/details_rating/:id', (req, res, next) => {
    
     surveyController.TakeRatingSurvey(req, res);
+}).post('/details_rating/:id', (req, res, next) => { 
+   responseController.CreateResponseForRating(req,res);
 });
 
 // GET the Survey Details page in order to submit answers

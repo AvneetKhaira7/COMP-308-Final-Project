@@ -62,12 +62,9 @@ let ResponseSchema = new Schema({
   
   responseUser:{
  type: Schema.Types.ObjectId, 
- default:''
+ ref: 'users'
   },
-  createdBy: {
-    type: Schema.Types.ObjectId, 
-    ref: 'users'   
-  }, 
+  
    created: {
     type: Date,
     default: Date.now

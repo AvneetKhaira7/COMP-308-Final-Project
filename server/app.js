@@ -30,8 +30,8 @@ db.once('open', () => {
 let index = require('./routes/index'); // top level routes
 let users = require('./routes/users'); // routes for users and auth
 let dashboard = require('./routes/dashboard'); //routes for dashboard
-let surveys = require('./routes/surveys');
-let sresponse = require('./routes/sresponse');
+let surveys = require('./routes/surveys');//routes for survey
+let sresponse = require('./routes/sresponse');//routes for response
 
 let app = express();
 
@@ -64,7 +64,7 @@ app.use('/', index); // top level links
 app.use('/dashboard', dashboard); //dashboard link
 app.use('/users', users); // users links - start with /users
 app.use('/surveys',surveys);// survey link - start with /surveys
-app.use('/sresponse', sresponse);
+app.use('/sresponse', sresponse);// survey link - start with /sresponse
 
 // Passport User Configuration
 let UserModel = require('./models/users');
