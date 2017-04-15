@@ -9,20 +9,64 @@ let ResponseSchema = new Schema({
     default: '',
     trim: true    
   },
-   question_Id: {
+   question1: {
     type: String,
     default: '',
     trim: true
   },
-  answer_Id: {
+  answer1: {
     type: string,
     default: '',
     trim: true    
   }, 
-  question_UserId: {
+  question2: {
     type: String,
     default: '',
+    trim: true
+  },
+  answer2: {
+    type: string,
+    default: '',
     trim: true    
+  }, 
+  question3: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  answer3: {
+    type: string,
+    default: '',
+    trim: true    
+  }, 
+  question4: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  answer4: {
+    type: string,
+    default: '',
+    trim: true    
+  }, 
+  question5: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  answer5: {
+    type: string,
+    default: '',
+    trim: true    
+  }, 
+  
+  responseUser:{
+ type: Schema.Types.ObjectId, 
+ default:''
+  },
+  createdBy: {
+    type: Schema.Types.ObjectId, 
+    ref: 'users'   
   }, 
    created: {
     type: Date,
