@@ -66,17 +66,12 @@ module.exports.DisplayRatingAnswers = (req, res) => {
   });
 }
 
-<<<<<<< HEAD
+
 // Displays the short answers Survey to take it
 
 module.exports.TakeShortAnswersSurvey=(req,res) =>
-=======
-
-// Displays the Survey to take it
-module.exports.TakeSurvey=(req,res) =>
->>>>>>> b8fc4ec5a3fc22b8e47c5da128ea537cd673f966
 {
-  try {
+   try {
       // get a reference to the id from the url
       let id = mongoose.Types.ObjectId.createFromHexString(req.params.id);
 
@@ -98,7 +93,6 @@ module.exports.TakeSurvey=(req,res) =>
     
     }
 }
-
 // Displays the rating answers Survey to take it
 
 module.exports.TakeRatingSurvey=(req,res) =>
