@@ -45,7 +45,11 @@
               <td class="text-center"><%= surveys[count].survey_active%>
               </td>
               <td class="text-center">
-              <a href="/surveys/details/<%= surveys[count]._id %>" class="btn btn-primary">
+               <%if(surveys[count].surveyType == '1'){ %>
+              <a href="/surveys/details_short/<%= surveys[count]._id %>" class="btn btn-primary">
+              <% }else{ %>
+              <a href="/surveys/details_rating/<%= surveys[count]._id %>" class="btn btn-primary">
+              <% } %>
               <i class="fa fa-pencil-square-o"></i> Take Survey</a>
               </td>
             </tr>

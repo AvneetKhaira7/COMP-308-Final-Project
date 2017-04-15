@@ -21,6 +21,17 @@ router.get('/created', (req, res, next)=>{
 })
 
 
+
+router.get('/details_short/:id', (req, res, next) => {
+   
+    surveyController.TakeShortAnswersSurvey(req, res);
+});
+
+router.get('/details_rating/:id', (req, res, next) => {
+   
+    surveyController.TakeRatingSurvey(req, res);
+});
+
 // GET the Survey Details page in order to submit answers
 router.get('/details/:id', (req, res, next) => {
    

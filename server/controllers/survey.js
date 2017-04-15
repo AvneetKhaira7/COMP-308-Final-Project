@@ -67,8 +67,35 @@ module.exports.DisplayRatingAnswers = (req, res) => {
 }
 
 
-// Displays the Survey to take it
-module.exports.TakeSurvey=(req,res) =>
+// Displays the short answers Survey to take it
+
+module.exports.TakeShortAnswersSurvey=(req,res) =>
+{
+   try {
+      // get a reference to the id from the url
+      let id = mongoose.Types.ObjectId.createFromHexString(req.params.id);
+
+        // finding  book by its id
+      survey.findById(id, (err, survey) => {
+        if(err) {
+          console.log(err);
+          res.end(error);
+        } else {
+        res.render('survey/detailshort', {
+        title: "Survey Name",
+        surveys: survey,
+        displayName: req.user ? req.user.displayName : ''
+  });
+        }
+      });
+    } catch (err) {
+      console.log(err);
+    
+    }
+}
+// Displays the rating answers Survey to take it
+
+module.exports.TakeRatingSurvey=(req,res) =>
 {
   try {
       // get a reference to the id from the url
@@ -80,7 +107,7 @@ module.exports.TakeSurvey=(req,res) =>
           console.log(err);
           res.end(error);
         } else {
-        res.render('survey/detailshort', {
+        res.render('survey/detailrating', {
         title: "Survey Name",
         surveys: survey,
         displayName: req.user ? req.user.displayName : ''
