@@ -21,6 +21,23 @@ module.exports.ReadSurveyList = (req, res) => {
   });
 }
 
+// Read and display the Survey List
+module.exports.ReadSurveyListByUserId = (req, res) => {
+  // find all surveys in the surveys collection
+  survey.find({"createdBy" : mongoose.Types.ObjectId(req.user ? req.user.id: '') } , (err, surveys) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+      res.render('sresponse/allsurveys', {
+        title: 'Surveys',
+        surveys: surveys,
+        displayName: req.user.displayName
+      });
+    }
+  });
+}
+
 // displays the Details page - allowing users to add a new Survey
 module.exports.DisplayAdd = (req, res) => {
   res.render('survey/index', {

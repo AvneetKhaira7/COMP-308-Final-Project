@@ -1,0 +1,52 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+          <h3>Surveys List </h3>
+          <br>          
+          <table class="table table-bordered table-striped table-hover">
+            <tr>
+              <th class="text-center">Name</th>
+              <th class="text-center">Active</th>
+              <th class="text-center">Response Count</th>
+              <th class="text-center">Go To Response</th>
+            </tr>
+            <!-- Template Row -->
+
+            <!--  Use the table from surveys/index to populate the created survey table.
+            The active code will show error if I leave it out here -->
+            <!--In go to survey column please provide the link to the survey -->
+            
+            <!-- Template Row -->
+            <% for (let count = 0; count < surveys.length; count++) { %>
+            <tr>
+              <td class="text-center"><%= surveys[count].surveyName %></td>
+               <td class="text-center"><%= surveys[count].survey_active%>
+              </td>
+              <td class="text-center">Count
+               </td>
+                <td class="text-center">
+                 <%if(surveys[count].surveyType == '1'){ %>
+              <a href="/response/view/<%= surveys[count]._id %>" class="btn btn-primary">
+              <% }else{ %>
+              <a href="/response/view/<%= surveys[count]._id %>" class="btn btn-primary">
+              <% } %>
+               </td>
+            </tr>
+            <% } %>
+            
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+<% include ../partials/footer.ejs %>
+
+

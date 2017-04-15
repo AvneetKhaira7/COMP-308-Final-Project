@@ -9,10 +9,11 @@
         <br>
         <br>
           <h3>Survey Name:  </h3>
-                      
+                       <% for (let count = 0; count < response.length; count++) { %>
+                       <h3>Response <%= count+1 %></h3>
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q1TextField">q1 from db</label>
+                       <label for="q1TextField">response.question1</label>
                       </li>
                       <li class="list-group-item">
                       <label for="a1TextField"> Answer from db </label>
@@ -21,7 +22,7 @@
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q2TextField">q2 from db</label>
+                       <label for="q2TextField">response.question2</label>
                       </li>
                       <li class="list-group-item">
                       <label for="a2TextField"> Answer from db </label>
@@ -30,7 +31,7 @@
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q3TextField">q3 from db</label>
+                       <label for="q3TextField">response.question3</label>
                       </li>
                       <li class="list-group-item">
                       <label for="a3TextField"> Answer from db </label>
@@ -39,7 +40,7 @@
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q4TextField">q4 from db</label>
+                       <label for="q4TextField">response.question4</label>
                       </li>
                       <li class="list-group-item">
                       <label for="a4TextField"> Answer from db </label>
@@ -48,13 +49,15 @@
 
                       <ul class="list-group">
                       <li class="list-group-item">
-                       <label for="q5TextField">q5 from db</label>
+                       <label for="q5TextField">response.question5</label>
                       </li>
                       <li class="list-group-item">
                       <label for="a5TextField"> Answer from db </label>
                       </li>
                       </ul>
-                     
+                     <% } %>
+
+                  
            <!-- Redirect to my surveys or Dashboard -->
          
         </div>
