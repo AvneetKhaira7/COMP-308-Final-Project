@@ -8,58 +8,61 @@
         <br>
         
           <h3>Survey Name: <%= surveys.surveyName %></h3>
+          
            <form class="form" method="post">
            <div class="form-check form-check-inline">
 
-<
-                    <input type="hidden" name="q1" value="<%= surveys.survey_question1 %>">
+
+                    <input type="hidden" name="q1" value="<%= surveys.survey_question1 %>" >
 
                     <label for="q1TextField" style="height:20px"><%= surveys.survey_question1 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">1</label>                                  
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">2</label>                            
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">3</label>                                      
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1">4</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1" value="1">1</label>                                  
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1" value="2">2</label>                            
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1" value="3">3</label>                                      
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq1" value="4">4</label>
                     </div>
                 
                
-                
+                <input type="hidden" name="q2" value="<%= surveys.survey_question2 %>" >
                     <label for="q2TextField" style="height:20px"><%= surveys.survey_question2 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">1</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">2</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">3</label>
-                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2">4</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2" value="1">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2" value="2">2</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2" value="3">3</label>
+                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq2" value="4">4</label>
                     </div>
                
-
+<input type="hidden" name="q3" value="<%= surveys.survey_question3 %>" >
                     <label for="q3TextField" style="height:20px"><%= surveys.survey_question3 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">1</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">2</label>
-                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">3</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3">4</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3" value="1">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3" value="2">2</label>
+                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3" value="3">3</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq3" value="4">4</label>
      
                     </div>
 
+<input type="hidden" name="q4" value="<%= surveys.survey_question4 %>" >
                    <label for="q4TextField" style="height:20px"><%= surveys.survey_question4 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">1</label>
-                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">2</label>
-                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">3</label>
-                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4">4</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" value="1">1</label>
+                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" value="2">2</label>
+                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" value="3">3</label>
+                   <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" value="4">4</label>
                     </div>
                    
-
+<input type="hidden" name="q5" value="<%= surveys.survey_question5 %>" >
                     <label for="q5TextField" style="height:20px"><%= surveys.survey_question5 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">1</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">2</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">3</label>
-                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5">4</label>
->>>>>>> 87508d70cec52b5618f4248f30da7e2f531ea52b
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" value="1">1</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" value="2">2</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" value="3">3</label>
+                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" value="4">4</label>
+
                     </div>                
-              </div>                                           
+              </div>                     
+               <input type="hidden" name="id" value= <%= surveys.id %>>                      
           <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
           <!-- Redirect to my surveys or Dashboard -->
           </form>
