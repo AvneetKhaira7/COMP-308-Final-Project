@@ -7,11 +7,14 @@
           <h1><%= title %></h1>
           <h2> Active surveys </h2>
           <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Survey 1 from db</a>
-          <a href="#" class="list-group-item list-group-item-action">Survey 2 from db</a>
-          <a href="#" class="list-group-item list-group-item-action">Survey 3 from db</a>
-          <a href="#" class="list-group-item list-group-item-action">Survey 4 from db</a>
-          <a href="#" class="list-group-item list-group-item-action">Survey 5 from db</a>
+          <% for (let count = 0; count < results.length; count++) { %>
+          <%if(results[count].surveyType == '1'){ %>
+              <a href="/surveys/details_short/<%= results[count]._id %>" class="list-group-item list-group-item-action"><%= results[count].surveyName %></a>
+              <% }else{ %>
+              <a href="/surveys/details_rating/<%= results[count]._id %>"class="list-group-item list-group-item-action"><%= results[count].surveyName %></a>
+              <% } %>
+         
+          <% } %>
         </div>
         </div>
       </div>

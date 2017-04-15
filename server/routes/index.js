@@ -16,10 +16,7 @@ router.get('/login', (req, res, next) => {
   userController.DisplayLogin(req, res);
 });
 
-/* GET Dashboard page. */
-router.get('/dashboard', (req, res, next) => {
-  indexController.DisplayDashboard(req, res);
-});
+
 router.get('/contactUs', (req, res, next) => {
   indexController.DisplayContactUs(req, res);
 });

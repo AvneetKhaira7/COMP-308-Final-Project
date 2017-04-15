@@ -2,13 +2,13 @@
 let express = require('express');
 let router = express.Router();
 
-// require the users controller
+// require the dashboard controller
 let dashboardController = require('../controllers/dashboard');
 
-// GET /login - render the login view
-router.get('/dashboard', (req, res, next)=>{
-  dashboardController.DisplayDashboard(req, res);
-  // POST /login - process the login attempt
+
+router.get('/', (req, res, next)=>{
+  dashboardController.ReadSurveyListByUserId(req, res);
+  
 })
 
 
