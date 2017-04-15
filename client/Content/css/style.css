@@ -9874,3 +9874,71 @@ span.customSelect.changed {
     display:inline-block;
 }
 
+/*Social buuton*/
+.fa-5x {
+    padding: 40px;
+   color:black;
+    text-align: center;
+    text-decoration: none;
+  background-color:white;
+    border-radius: 100%;
+    border-color:black;
+    display: block;
+   
+    /*box-shadow: 2px 0px 2px 0px #000;*/
+}
+.fa-5x:hover
+{
+    
+     color:whitesmoke;
+
+     background-color:#1a2732;
+}
+.contact-container
+{
+    margin-top:50px;
+    padding:10px;
+    width:100%;
+   
+   /* background-image:URL(/Scripts/assets/images/contact+us.jpg);*/
+    
+    border:10px black;
+}
+.heading
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:3em;
+       margin-left:20%;
+    margin-top:10%;
+    color: black;
+
+   /*// line-height: 10em;*/
+}
+.heading2
+{
+    font-size:1.5em;
+       margin-left:10%;
+       
+ margin-bottom:12%;
+
+   /*// line-height: 10em;*/
+}
+
+/* Add a hover effect if you want */
+/*.fa:hover {
+    opacity: 0.7;
+}*/
+
+/* Set a specific color for each brand */
+
+ /*Facebook */
+/*.fa-facebook {
+    background: #3B5998;
+    color: white;
+}*/
+
+/* Twitter */
+/*.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}*/
