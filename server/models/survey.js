@@ -82,8 +82,8 @@ survey_question5:{
   collection: "surveys"
 });
 
-let options = ({missingDescriptionError: "Please enter description"});
+//let options = ({missingDescriptionError: "Please enter description"});
 
-SurveySchema.plugin(passportLocalMongoose, options);
+//SurveySchema.plugin(passportLocalMongoose, options);
 
-exports.Survey = mongoose.model('survey', SurveySchema);
+exports.Survey = mongoose.model('Survey', SurveySchema);

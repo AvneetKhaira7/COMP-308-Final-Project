@@ -65,8 +65,8 @@ module.exports.DisplayRatingAnswers = (req, res) => {
   });
 }
 
-// Displays the Survey to take it
 
+// Displays the Survey to take it
 module.exports.TakeSurvey=(req,res) =>
 {
   try {
