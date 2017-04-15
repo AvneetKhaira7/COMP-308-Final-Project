@@ -39,6 +39,14 @@ module.exports.DisplayViewResponse = (req, res) => {
 
 }
 
+// displays the create from scratch page - allowing users to add a new Survey
+module.exports.DisplayResponseAnalysis = (req, res) => {
+  res.render('content/analysis', {
+    title: "Analysis",
+    displayName: req.user ? req.user.displayName : ''
+  });
+}
+
 
 module.exports.CreateResponseForShortAnswers = (req, res) => {
   let newResponse = response({
