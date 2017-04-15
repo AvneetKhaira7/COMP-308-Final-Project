@@ -16,10 +16,13 @@ let SurveySchema = new Schema({
     trim: true,
     required: 'survey description is required'
   },
-  survey_UserId: {
-    type: String,
-    default: '',
-    trim: true    
+  createdBy:{
+  type: Schema.Types.ObjectId, 
+    ref: 'users'
+  },
+  surveyType:{
+type: String,
+default:''
   },
 survey_AvailableOn: {
     type: Date,
@@ -81,9 +84,13 @@ survey_question5:{
 {
   collection: "surveys"
 });
+<<<<<<< HEAD
 
 //let options = ({missingDescriptionError: "Please enter description"});
 
 //SurveySchema.plugin(passportLocalMongoose, options);
 
 exports.Survey = mongoose.model('Survey', SurveySchema);
+=======
+exports.Survey = mongoose.model('survey', SurveySchema);
+>>>>>>> origin/master
