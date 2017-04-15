@@ -23,13 +23,14 @@ let response = require('../models/response').Response;
 
 // displays the create from scratch page - allowing users to add a new Survey
 module.exports.DisplayViewResponse = (req, res) => {
- response.find( (err, response) => {
+ response.find({"surveyId" : mongoose.Types.ObjectId('58f1ad7583af461c38c8220e') } ,  (err, response) => {
     if (err) {
       return console.error(err);
     }
     else {
        res.render('sresponse/view', {
         title: 'Response',
+        
         response: response,
         displayName: req.user ? req.user.displayName : ''
       });

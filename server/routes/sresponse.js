@@ -18,7 +18,9 @@ router.get('/allsurveys', (req, res, next)=>{
 surveyController.ReadSurveyListByUserId(req,res);
 });
 
-
+router.get('/view/:id', (req, res, next) => {   
+    responseController.DisplayViewResponse(req, res);
+})
 
 
 
