@@ -9,7 +9,9 @@ let surveyController = require('../controllers/survey');
 router.get('/home', (req, res, next)=>{
   surveyController.DisplayAdd(req, res);
   
-})
+}).post('/home', (req, res, next) => { 
+   surveyController.CreateSurvey(req,res);
+});
 
 
 // GET /login - render the login view
@@ -18,17 +20,29 @@ router.get('/created', (req, res, next)=>{
   // POST / 
 })
 
+
+// GET the Survey Details page in order to submit answers
+router.get('/details/:id', (req, res, next) => {
+   
+    surveyController.TakeSurvey(req, res);
+});
+
+
+
+
+
+
 // GET /login - render the created survey
 router.get('/shortanswers', (req, res, next)=>{
   surveyController.DisplayShortAnswers(req, res);
   // POST 
-})
+});
 
 // GET /login - render the created survey
 router.get('/ratinganswers', (req, res, next)=>{
   surveyController.DisplayRatingAnswers(req, res);
   // POST 
-})
+});
 
 
 module.exports = router;

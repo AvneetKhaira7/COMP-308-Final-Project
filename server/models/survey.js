@@ -33,7 +33,7 @@ survey_AvailableOn: {
   }, 
   survey_active:{
 type:Boolean,
-default:false
+default:true
   },
   created: {
     type: Date,
@@ -42,7 +42,41 @@ default:false
   updated: {
     type: Date,
     default: Date.now
-  }
+  },
+
+survey_question1:{
+  type : String,
+  default: '',
+  trim: true,
+  required: 'Question 1 is required'
+},
+survey_question2:{
+  type : String,
+  default: '',
+  trim: true,
+  required: 'Question 2 is required'
+},
+
+survey_question3:{
+  type : String,
+  default: '',
+  trim: true,
+  required: 'Question 3 is required'
+},
+survey_question4:{
+  type : String,
+  default: '',
+  trim: true,
+  required: 'Question 4 is required'
+},
+survey_question5:{
+  type : String,
+  default: '',
+  trim: true,
+  required: 'Question 5 is required'
+},
+
+
 },
 {
   collection: "surveys"
