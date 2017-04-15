@@ -21,6 +21,14 @@ let response = require('../models/response').Response;
 //   });
 // }
 
+// displays the create from scratch page - allowing users to add a new Survey
+module.exports.DisplayViewResponse = (req, res) => {
+  res.render('sresponse/viewshort', {
+    title: "Response",
+    displayName: req.user ? req.user.displayName : ''
+  });
+}
+
 
 module.exports.CreateResponse = (req, res) => {
   let newSurvey = survey({

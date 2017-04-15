@@ -15,7 +15,7 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer1: {
-    type: string,
+    type: String,
     default: '',
     trim: true    
   }, 
@@ -25,7 +25,7 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer2: {
-    type: string,
+    type: String,
     default: '',
     trim: true    
   }, 
@@ -35,7 +35,7 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer3: {
-    type: string,
+    type: String,
     default: '',
     trim: true    
   }, 
@@ -45,7 +45,7 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer4: {
-    type: string,
+    type: String,
     default: '',
     trim: true    
   }, 
@@ -55,7 +55,7 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer5: {
-    type: string,
+    type: String,
     default: '',
     trim: true    
   }, 
@@ -81,8 +81,8 @@ let ResponseSchema = new Schema({
   collection: "response"
 });
 
-let options = ({missingDescriptionError: "Please enter all data"});
+//let options = ({missingDescriptionError: "Please enter all data"});
 
-SurveySchema.plugin(passportLocalMongoose, options);
+//SurveySchema.plugin(passportLocalMongoose, options);
 
 exports.Response = mongoose.model('response', ResponseSchema);
