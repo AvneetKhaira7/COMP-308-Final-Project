@@ -7,10 +7,10 @@
         <br>
         <br>
         
-          <h3>Survey Name: </h3>
+          <h3>Survey Name: <%= surveys.surveyName %></h3>
            <form class="form" method="post">
            <div class="form-check form-check-inline">
-                    <label for="q1TextField">Q1 from db</label>            
+                    <label for="q1TextField"><%= surveys.survey_question1 %></label>            
                     <div class="form-check form-check-inline">
                     <label><input class="form-check-input" type="radio" name="optratingq1">1</label>
                     </div>
@@ -24,7 +24,7 @@
                     <label><input class="form-check-input" type="radio" name="optratingq1">4</label>
                     </div>
                 
-                    <label for="q2TextField">Q2 from db</label>            
+                    <label for="q2TextField"><%= surveys.survey_question2 %></label>            
                     <div class="form-check form-check-inline">
                     <label><input class="form-check-input" type="radio" name="optratingq2">1</label>
                     </div>
@@ -39,7 +39,7 @@
                     </div>
                
 
-                    <label for="q3TextField">Q3 from db</label>            
+                    <label for="q3TextField"><%= surveys.survey_question3 %></label>            
                     <div class="form-check form-check-inline">
                     <label><input class="form-check-input" type="radio" name="optratingq3">1</label>
                     </div>
@@ -53,7 +53,7 @@
                     <label><input class="form-check-input" type="radio" name="optratingq3">4</label>
                     </div>
                    
-                    <label for="q4TextField">Q4 from db</label>            
+                    <label for="q4TextField"><%= surveys.survey_question4 %></label>            
                     <div class="form-check form-check-inline">
                     <label><input class="form-check-input" type="radio" name="optratingq4">1</label>
                     </div>
@@ -68,7 +68,7 @@
                     </div>
                    
 
-                    <label for="q5TextField">Q5 from db</label>            
+                    <label for="q5TextField"><%= surveys.survey_question5 %></label>            
                     <div class="form-check form-check-inline">
                     <label><input class="form-check-input" type="radio" name="optratingq5">1</label>
                     </div>
