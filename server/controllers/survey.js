@@ -66,6 +66,15 @@ module.exports.DisplayRatingAnswers = (req, res) => {
   });
 }
 
+// displays the create from scratch page - allowing users to add a new Survey
+module.exports.DisplayTips = (req, res) => {
+  res.render('content/tips', {
+    title: "Survey Tips",
+    surveys: '',
+    displayName: req.user ? req.user.displayName : ''
+  });
+}
+
 
 // Displays the short answers Survey to take it
 

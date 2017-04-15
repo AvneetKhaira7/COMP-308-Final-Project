@@ -55,5 +55,11 @@ router.get('/ratinganswers', (req, res, next)=>{
   // POST 
 });
 
+// GET /tips - render the created survey
+router.get('/tips', (req, res, next)=>{
+  surveyController.DisplayTips(req, res);
+  // POST 
+});
+
 
 module.exports = router;
