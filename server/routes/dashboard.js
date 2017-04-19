@@ -11,5 +11,10 @@ router.get('/', (req, res, next)=>{
   
 })
 
+router.get('/anonymous', (req, res, next)=>{
+  dashboardController.ReadSurveyList(req, res);
+  
+})
+
 
 module.exports = router;

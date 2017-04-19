@@ -78,13 +78,23 @@
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu">                
-                  <li class="active">
+              <ul class="sidebar-menu">   
+              <% if(typeof displayName == 'string' && displayName) { %>                           
+                  <li class="active">                  
                       <a class="" href="/dashboard">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
+                  <% } else { %>
+                    <li class="active">                  
+                      <a class="" href="/dashboard/anonymous">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <% } %>
+                  <% if(typeof displayName == 'string' && displayName) { %>
                   <li>
                       <a class="" href="/surveys/home">
                           <i class="icon_document_alt"></i>
@@ -96,13 +106,15 @@
                           <i class="icon_desktop"></i>
                           <span>My Surveys</span>
                       </a>
-                  </li>      
+                  </li> 
+                  <% } %>     
                   <li>
                       <a class="" href="/surveys/tips">
                           <i class="icon_genius"></i>
                           <span>Survey Tips</span>
                       </a>
                   </li>
+                  <% if(typeof displayName == 'string' && displayName) { %>
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
@@ -110,19 +122,19 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-
                           <li><a class="" href="/sresponse/allsurveys">View Response</a></li>
                              <li><a class="" href="/sresponse/analysis">Analyze Response</a></li>
-
                       </ul>
                   </li>
-                  <li>                     
-                      <a class="" href="/contactUs">
-                          <i class="icon_phone"></i>
-                          <span>Contact Us</span>                      
-                      </a>                         
-                  </li>       
-              </ul>
+                <% }  else{%>
+                    <li>
+                      <a class="" href="/">
+                          <i class="icon_house_alt"></i>
+                          <span>Home</span>
+                      </a>
+                  </li> 
+                <% } %>
+              </ul> 
               <!-- sidebar menu end-->
           </div>
       </aside>
