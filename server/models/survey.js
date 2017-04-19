@@ -78,7 +78,11 @@ survey_question5:{
   trim: true,
   required: 'Question 5 is required'
 },
-
+responsecount:{
+  type : Number,
+  default: 0,
+  
+},
 
 },
 {

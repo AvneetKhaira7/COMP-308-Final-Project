@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-// define the survey model
+// define the response model
 let response = require('../models/response').Response;
 
 
