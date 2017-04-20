@@ -4,6 +4,7 @@ let Schema = mongoose.Schema; //alias for mongoose Schema
 let passportLocalMongoose = require('passport-local-mongoose');
 
 let SurveySchema = new Schema({
+  
   surveyName: {
     type: String,
     default: '',

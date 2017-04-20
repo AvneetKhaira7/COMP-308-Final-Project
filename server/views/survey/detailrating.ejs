@@ -52,7 +52,7 @@
                    <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq4" value="4">4</label>
                     </div>
                    
-<input type="hidden" name="q5" value="<%= surveys.survey_question5 %>" >
+                  <input type="hidden" name="q5" value="<%= surveys.survey_question5 %>" >
                     <label for="q5TextField" style="height:20px"><%= surveys.survey_question5 %></label>            
                     <div class="form-check form-check-inline" style="height:50px">
                     <label style="width:100px"><input class="form-check-input" type="radio" name="optratingq5" value="1" required>1</label>
@@ -62,7 +62,7 @@
 
                     </div>                
               </div>                     
-               <input type="hidden" name="id" value= <%= surveys.id %>>                      
+               <input type="text" name="id" value= <%= surveys.id %>>                      
           <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
           <!-- Redirect to my surveys or Dashboard -->
           </form>

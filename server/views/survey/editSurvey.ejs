@@ -1,0 +1,113 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+        <br>
+        <br>
+        <br>
+        <br>
+ <form class="form" method="post">
+        <div class="form-group">
+                     <label for="nameTextField">Survey Name</label>
+                        <input type="text" class="form-control" id="nameTextField"
+                     placeholder="Survey Name" name="sname" value="<%= surveys.surveyName %>" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="descTextField">Survey Description</label>
+                        <input type="text" class="form-control" id="descTextField"
+                     placeholder="Survey Description" name="sdesc" value="<%= surveys.survey_Description %>" required>
+                    </div>
+                    <div class="form-group">
+                     <label for="q1TextField">Q1</label>
+                        <input type="text" class="form-control" id="q1TextField"
+                     placeholder="Question 1" name="q1" value="<%= surveys.survey_question1 %>" required>
+                    </div>
+                    <div class="form-group">
+                         <label for="q2TextField">Q2</label>
+                        <input type="text" class="form-control" id="q2TextField"
+                     placeholder="Question 2" name="q2" value="<%= surveys.survey_question2 %>" required>
+                    </div>
+              <div class="form-group">
+               <label for="q3TextField">Q3</label>
+                        <input type="text" class="form-control" id="q3TextField"
+                     placeholder="Question 3" name="q3" value="<%= surveys.survey_question3 %>" required>
+              </div>
+              <div class="form-group">
+               <label for="q4TextField">Q4</label>
+                        <input type="text" class="form-control" id="q4TextField"
+                     placeholder="Question 4" name="q4" value="<%= surveys.survey_question4 %>" required>
+              </div>
+              <div class="form-group">
+               <label for="q5TextField">Q5</label>
+                        <input type="text" class="form-control" id="q5TextField"
+                     placeholder="Question 5" name="q5" value="<%= surveys.survey_question5 %>" required>
+              </div>
+              <div class="form-group">
+              <label for="radioBtn">Is this survey active?</label>
+                    <div class="radio">
+                    <% if(surveys.survey_active == true) {%>
+                    <label><input type="radio" name="optradio" checked="true" value="true">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" value="false">No</label>
+                    </div>
+                    <% } else if(surveys.survey_active == false) {%>
+                    <label><input type="radio" name="optradio"  value="true">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optradio" checked="true" value="false">No</label>
+                    </div>
+                    <% } %>
+                    <input type="hidden" name="surveytype" value="<%= surveys.surveyType %>"/>
+              </div>
+              <div class="form-group ">
+                    <label class="control-label col-sm-2 requiredField" for="date">
+                    Expiry Date
+                    <span class="asteriskField">
+                        *
+                    </span>
+                    </label>
+                    <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                        <i class="fa fa-calendar">
+                        </i>
+                        </div>
+                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" value="<%= surveys.survey_ExpiresOn %>" required/>
+                    </div>
+                    </div>
+                </div>
+                <br> <br><br>
+               <div class="form-group">
+              <label for="radioBtn">Is this survey available to anonymous User?</label>
+               <% if(surveys.survey_availableForAnonymous == true) {%>
+                    <div class="radio">
+                    <label><input type="radio" name="optuserradio" checked = "true" value="true">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optuserradio"  value="false">No</label>
+                    </div>
+                     <% } else if(surveys.survey_availableForAnonymous == false) {%>
+                    <div class="radio">
+                    <label><input type="radio" name="optuserradio" value="true">Yes</label>
+                    </div>
+                    <div class="radio">
+                    <label><input type="radio" name="optuserradio" checked = "true" value="false">No</label>
+                    </div>
+                    <% } %>
+              </div>              
+               <div class="form-group ">
+               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+               <br>
+        <br>
+        <br>
+        <br>
+             </div>
+            </form>
+                </div>
+            </div>
+            </div>
+            
+
+
+       <% include ../partials/footer.ejs %>

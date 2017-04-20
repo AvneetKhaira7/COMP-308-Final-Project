@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 // define the response model
 let response = require('../models/response').Response;
 
-let statsSchema = require('../models/stats').statsSchema;
+
 
 // displays the response page
 module.exports.DisplayViewResponse = (req, res) => {
@@ -113,28 +113,4 @@ module.exports.getResponseCount=(req,res)=> {
   
 }
 
-module.exports.CreateStatsForResponse = (req, res) => {
-  let newResponse = response({
-      "surveyId":req.body.id,
-      "countAnonymousUsers": req.body.q1,
-      "countRegisteredUsers": req.body.q2,
-      "countResponses": req.body.q3,
-      "countlastUpdated":req.body.q4
-      
-    });
 
-    response.create(newResponse, (err, newResponse)=> {
-      if(err) {
-        console.log(err);
-        res.end(err);
-      } else {
-       if(req.user){
-          console.log("created")
-          res.redirect('/surveys/created');          
-        }
-        else{
-          res.redirect('/dashboard/anonymous');
-        }
-      }
-    });
-}
