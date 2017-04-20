@@ -36,7 +36,8 @@ module.exports.DisplayResponseAnalysis = (req, res) => {
 
 module.exports.CreateResponseForShortAnswers = (req, res) => {
   let newResponse = response({
-      "surveyId":req.body.id,
+      "surveyId":mongoose.Types.ObjectId(req.body.id),
+      "surveyName":req.body.surveyName,
       "question1": req.body.q1,
       "question2": req.body.q2,
       "question3": req.body.q3,
@@ -68,7 +69,8 @@ module.exports.CreateResponseForShortAnswers = (req, res) => {
 
 module.exports.CreateResponseForRating = (req, res) => {
   let newResponse = response({
-      "surveyId":req.body.id,
+      "surveyId":mongoose.Types.ObjectId(req.body.id),
+      "surveyName":req.body.surveyName,
       "question1": req.body.q1,
       "question2": req.body.q2,
       "question3": req.body.q3,
@@ -98,9 +100,7 @@ module.exports.CreateResponseForRating = (req, res) => {
     });
 }
 
-module.exports.createStats=(req,res)=> {
-  
-}
+
 module.exports.getResponseCount=(req,res)=> {
   response.find({"surveyId" : mongoose.Types.ObjectId(req.params.id) }.count() ,  (err, response) => {
     if (err) {

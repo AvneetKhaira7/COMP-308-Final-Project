@@ -14,7 +14,6 @@
             <tr>
               <th class="text-center">Name</th>
               <th class="text-center">Active</th>
-              <th class="text-center">Response Count</th>
               <th class="text-center">Go To Response</th>
             </tr>
             <!-- Template Row -->
@@ -29,13 +28,11 @@
               <td class="text-center"><%= surveys[count].surveyName %></td>
                <td class="text-center"><%= surveys[count].survey_active%>
               </td>
-              <td class="text-center">Count
-               </td>
                 <td class="text-center">
                  <%if(surveys[count].surveyType == '1'){ %>
-              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-primary">
+              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-warning">View Response</a>
               <% }else{ %>
-              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-primary">
+              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-warning">View Response</a>
               <% } %>
                </td>
             </tr>

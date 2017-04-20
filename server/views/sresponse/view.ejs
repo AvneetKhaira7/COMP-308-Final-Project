@@ -9,12 +9,13 @@
         <br>
         <br>
 
-          <h3>Survey Name: <%= response.length %> </h3>
+          <h3>Survey Name: <%= response[0].surveyName %> </h3>
+           <h4>Total Responses: <%= response.length %> </h3>
             <h3><a href="/viewcsv/:id">Export to CSV</a></h3>
 
            
                        <% for (let count = 0; count < response.length; count++) { %>
-                       <h3>Response <%= count+1 %> </h3>
+                       <h4>Response <%= count+1 %> </h4>
                       <ul class="list-group">
                       <li class="list-group-item">
                        <label for="q1TextField"><%= response[count].question1 %></label>
