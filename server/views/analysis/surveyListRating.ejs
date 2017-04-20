@@ -15,7 +15,7 @@
               <th class="text-center">Name</th>
               <th class="text-center">Active</th>
               <th class="text-center">Response Count</th>
-              <th class="text-center">Go To Response</th>
+              <th class="text-center">Go To Responsesessss</th>
             </tr>
             <!-- Template Row -->
 
@@ -24,20 +24,18 @@
             <!--In go to survey column please provide the link to the survey -->
             
             <!-- Template Row -->
+
             <% for (let count = 0; count < surveys.length; count++) { %>
             
             <tr>
               <td class="text-center"><%= surveys[count].surveyName %></td>
                <td class="text-center"><%= surveys[count].survey_active%>
               </td>
-              <td class="text-center">Count
+              <td class="text-center">Count 
                </td>
                 <td class="text-center">
-                 <%if(surveys[count].surveyType == '1'){ %>
-              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-primary">
-              <% }else{ %>
-              <a href="/sresponse/view/<%= surveys[count]._id %>" class="btn btn-primary">
-              <% } %>
+                
+              <a href="/sresponse/analysis/<%= surveys[count]._id %>"><i class="fa fa-bar-chart fa-2x"></i> </a>            
                </td>
             </tr>
             <% } %>

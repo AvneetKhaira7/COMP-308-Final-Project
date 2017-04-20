@@ -7,12 +7,12 @@
         <br>
         <br>
         
-          <h3>Survey Name: <%= surveys.surveyName %></h3>
-          <input type="hidden" name="surveyName" value ="<%= surveys.surveyName %>"></input>
+          <h3>SurveyName: <%= surveys.surveyName %></h3>
+         
            <form class="form" method="post">
            <div class="form-check form-check-inline">
 
-
+ <input type="hidden" name="surveyName" value ="<%= surveys.surveyName %>"></input>
                     <input type="hidden" name="q1" value="<%= surveys.survey_question1 %>" >
 
                     <label for="q1TextField" style="height:20px"><%= surveys.survey_question1 %></label>            

@@ -5,9 +5,11 @@
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
           <h1><%= title %></h1>
-          <h2> Please choose survey to get answers. </h2>
+      <h2><%= response[0].surveyName %></h2>
+     
+
         
-        <ul class="list-group">
+        <!--<ul class="list-group">
         <li class="list-group-item">
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurveyModal">Survey 1 from db</button>        
         </li>
@@ -18,10 +20,9 @@
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurveyModal">Survey 3 from db</button>              
         </li>       
         </ul>
-        <% include ../partials/analysiscount.ejs %>
-        </div>
+        <% include ../partials/analysiscount.ejs %>-->
         <div class="ct-chart chartAnalysis"></div>
-<pre><%- analytics %></pre>
+        </div>
 
 <script>
  
@@ -30,17 +31,40 @@ let chart = new Chartist.Bar('.ct-chart', {
   series: <%- analytics %>.data
 }, {
   stackBars: true,
+  // plugins: [
+  //                   Chartist.plugins.ctAxisTitle({
+  //                       axisX: {
+  //                           axisTitle: 'Number Of Users',
+  //                           axisClass: 'ct-axis-title',
+  //                           offset: {
+  //                               x: 0,
+  //                               y: 50
+  //                           },
+  //                           textAnchor: 'middle'
+  //                       },
+  //                       axisY: {
+  //                           axisTitle: 'Questions',
+  //                           axisClass: 'ct-axis-title',
+  //                           offset: {
+  //                               x: 0,
+  //                               y: -1
+  //                           },
+  //                           flipTitle: false
+  //                        }
+  //                   })
+  //               ]
   axisY: {
+
     labelInterpolationFnc: function(value) {
-      console.log(value);
+     // console.log(value);
     //  return (value*<%=response.length %>) ;
-    return(value / 1)
+    return(value)
     }
   }
 }).on('draw', function(data) {
   if(data.type === 'bar') {
     data.element.attr({
-      style: 'stroke-width: 30px'
+      style: 'stroke-width: 50px'
     });
   }
 });

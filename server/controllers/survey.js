@@ -39,6 +39,22 @@ module.exports.ReadSurveyListByUserId = (req, res) => {
     }
   });
 }
+///vishu --read only rating for analysis
+module.exports.ReadSurveyListByUserIdRating = (req, res) => {
+  // find all surveys in the surveys collection
+  survey.find({"createdBy" : mongoose.Types.ObjectId(req.user ? req.user.id: '') , "surveyType" :'2'} , (err, surveys) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+      res.render('analysis/surveyListRating', {
+        title: 'Surveys',
+        surveys: surveys,
+        displayName: req.user.displayName
+      });
+    }
+  });
+}
 
 // displays the Details page - allowing users to add a new Survey
 module.exports.DisplayAdd = (req, res) => {

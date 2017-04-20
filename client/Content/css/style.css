@@ -9923,6 +9923,18 @@ span.customSelect.changed {
 
    /*// line-height: 10em;*/
 }
+.chartAnalysis
+{
+width:400px;
+height:300px;
+
+}
+.ct-label 
+{
+    font-size:1.5rem;
+}
+
+
 
 /* Add a hover effect if you want */
 /*.fa:hover {

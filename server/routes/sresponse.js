@@ -35,7 +35,12 @@ router.get('/view/:id/export.csv',(req, res, next)=>{
   responseController.exportd(req, res);
   // POST 
 });
+router.get('/analysis', (req, res, next)=>{
+ // responseController.DisplayResponseAnalysis(req, res);
+  surveyController.ReadSurveyListByUserIdRating(req, res);
  
+  // POST 
+});
 // GET /login - render the created survey
 router.get('/analysis/:id', (req, res, next)=>{
  // responseController.DisplayResponseAnalysis(req, res);
