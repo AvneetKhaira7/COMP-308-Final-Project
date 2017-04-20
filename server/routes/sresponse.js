@@ -22,7 +22,7 @@ router.get('/view', (req, res, next)=>{
 });
 
 
-let express = require('express');router.get('/allsurveys', (req, res, next)=>{
+router.get('/allsurveys', (req, res, next)=>{
 surveyController.ReadSurveyListByUserId(req,res);
 });
 
