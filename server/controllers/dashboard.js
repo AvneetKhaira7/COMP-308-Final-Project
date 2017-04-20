@@ -27,11 +27,28 @@ module.exports.ReadSurveyListByUserId = (req, res) => {
   });
 }
 
+// Read and display the Survey List
+module.exports.ReadActiveSurveyList= (req, res) => {
+  // find all surveys in the surveys collection
+  survey.find({"survey_active" : Boolean(true) } , (err, surveys) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+      res.render('content/dashboard', {
+        title: 'Dashboard',
+        results: surveys,
+        displayName:  req.user ? req.user.displayName : ''
+      });
+    }
+  });
+}
+
 
 // Read and display the Survey List
-module.exports.ReadSurveyList = (req, res) => {
+module.exports.ReadSurveyListAnonymous = (req, res) => {
   // find all surveys in the surveys collection
-  survey.find( (err, surveys) => {
+  survey.find({"survey_availableForAnonymous" : Boolean(true) } , (err, surveys) => {
     if (err) {
       return console.error(err);
     }

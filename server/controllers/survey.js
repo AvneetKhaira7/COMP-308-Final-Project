@@ -160,7 +160,9 @@ module.exports.CreateSurvey = (req, res) => {
       "survey_question4":req.body.q4,
       "survey_question5":req.body.q5,
       "surveyType":req.body.surveytype,
-      "survey_active":req.bodyoptradio     
+      "survey_active":req.body.optradio,
+      "survey_availableForAnonymous" :req.body.optuserradio ,
+      "survey_ExpiresOn": req.body.date
     });
 
     survey.create(newSurvey, (err, newSurvey)=> {

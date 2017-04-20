@@ -78,6 +78,10 @@ survey_question5:{
   trim: true,
   required: 'Question 5 is required'
 },
+survey_availableForAnonymous:{
+  type : Boolean, 
+  required: 'Select if available for anonymous'
+},
 responsecount:{
   type : Number,
   default: 0,

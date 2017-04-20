@@ -7,12 +7,12 @@ let dashboardController = require('../controllers/dashboard');
 
 
 router.get('/', (req, res, next)=>{
-  dashboardController.ReadSurveyListByUserId(req, res);
+  dashboardController.ReadActiveSurveyList(req, res);
   
 })
 
 router.get('/anonymous', (req, res, next)=>{
-  dashboardController.ReadSurveyList(req, res);
+  dashboardController.ReadSurveyListAnonymous(req, res);
   
 })
 
