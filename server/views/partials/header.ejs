@@ -90,14 +90,14 @@
               <% if(typeof displayName == 'string' && displayName) { %>                           
                   <li class="active">                  
                       <a class="" href="/dashboard">
-                          <i class="icon_house_alt"></i>
+                          <i class="fa fa-dashcube"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
                   <% } else { %>
                     <li class="active">                  
                       <a class="" href="/dashboard/anonymous">
-                          <i class="icon_house_alt"></i>
+                          <i class="fa fa-dashcube"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
@@ -111,7 +111,7 @@
                   </li> 
                   <li>
                       <a class="" href="/surveys/created">
-                          <i class="icon_desktop"></i>
+                          <i class="fa fa-bookmark"></i>
                           <span>My Surveys</span>
                       </a>
                   </li> 
@@ -123,17 +123,18 @@
                       </a>
                   </li>
                   <% if(typeof displayName == 'string' && displayName) { %>
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
+                   <li>
+                      <a class="" href="/sresponse/allsurveys">
                           <i class="icon_desktop"></i>
-                          <span>Response</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+                          <span>View Response</span>
                       </a>
-                      <ul class="sub">
-                          <li><a class="" href="/sresponse/allsurveys">View Response</a></li>
-                             <li><a class="" href="/sresponse/analysis">Analyze Response</a></li>
-                      </ul>
                   </li>
+                  <li>
+                      <a class="" href="/sresponse/analysis">
+                          <i class="fa fa-bar-chart"></i>
+                          <span>Analyze Response</span>
+                      </a>
+                  </li>                  
                 <% }  else{%>
                     <li>
                       <a class="" href="/">
