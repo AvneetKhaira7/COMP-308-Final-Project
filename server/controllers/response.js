@@ -36,7 +36,7 @@ module.exports.CreateResponseForShortAnswers = (req, res) => {
   let newResponse = response({
 
       "surveyId":mongoose.Types.ObjectId(req.body.id),
-      "surveyName":req.body.surveyName,
+      "surveyName":req.body.surveyn,
       "question1": req.body.q1,
       "question2": req.body.q2,
       "question3": req.body.q3,
@@ -71,7 +71,7 @@ module.exports.CreateResponseForRating = (req, res) => {
   let newResponse = response({
 
       "surveyId":mongoose.Types.ObjectId(req.body.id),
-      "surveyName":req.body.surveyName,
+      "surveyName": req.body.surveyn,
       "question1": req.body.q1,
       "question2": req.body.q2,
       "question3": req.body.q3,
