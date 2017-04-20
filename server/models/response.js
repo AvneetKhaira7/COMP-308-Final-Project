@@ -5,6 +5,11 @@ let passportLocalMongoose = require('passport-local-mongoose');
 
 let ResponseSchema = new Schema({
   surveyId: {
+    type: Schema.Types.ObjectId,
+    default: '',
+    trim: true    
+  },
+  surveyName: {
     type: String,
     default: '',
     trim: true    

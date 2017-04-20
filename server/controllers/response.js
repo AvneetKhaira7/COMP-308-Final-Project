@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 // define the response model
 let response = require('../models/response').Response;
 
-let json2csv = require('json2csv');
+let statsSchema = require('../models/stats').statsSchema;
 
 // displays the response page
 module.exports.DisplayViewResponse = (req, res) => {
@@ -12,8 +12,10 @@ module.exports.DisplayViewResponse = (req, res) => {
       return console.error(err);
     }
     else {
+      console.log(response.length+"is number of responses");
        res.render('sresponse/view', {
-        title: 'Response',        
+        title: 'Response',  
+        count1:response.length,      
         response: response,
         displayName: req.user ? req.user.displayName : ''
       });
@@ -96,25 +98,43 @@ module.exports.CreateResponseForRating = (req, res) => {
     });
 }
 
-// displays the response page
-module.exports.ExportDataCSV = (req, res) => {
- response.find({"surveyId" : mongoose.Types.ObjectId('58f23741386c491a14fa4137') } ,  (err, response) => {
+module.exports.createStats=(req,res)=> {
+  
+}
+module.exports.getResponseCount=(req,res)=> {
+  response.find({"surveyId" : mongoose.Types.ObjectId(req.params.id) }.count() ,  (err, response) => {
     if (err) {
       return console.error(err);
     }
     else {
-       // response csv
-       var csv = json2csv({ data: response, fields: ['answer1','answer2','answer3','answer4','answer5' ]}); 
-fs.writeFile('file.csv', csv, function(err) {
-  if (err) throw err;
-  else{
-  res.attachment('filename.csv');
-res.status(200).send(data);
-  console.log('file saved');
-  }
-});
+      console.log(response);
     }
   });
   
+}
 
+module.exports.CreateStatsForResponse = (req, res) => {
+  let newResponse = response({
+      "surveyId":req.body.id,
+      "countAnonymousUsers": req.body.q1,
+      "countRegisteredUsers": req.body.q2,
+      "countResponses": req.body.q3,
+      "countlastUpdated":req.body.q4
+      
+    });
+
+    response.create(newResponse, (err, newResponse)=> {
+      if(err) {
+        console.log(err);
+        res.end(err);
+      } else {
+       if(req.user){
+          console.log("created")
+          res.redirect('/surveys/created');          
+        }
+        else{
+          res.redirect('/dashboard/anonymous');
+        }
+      }
+    });
 }
