@@ -22,6 +22,9 @@ router.get('/view/:id', (req, res, next) => {
     responseController.DisplayViewResponse(req, res);
 })
 
+router.get('/viewcsv/:id', (req, res, next) => {   
+    responseController.ExportDataCSV(req, res);
+})
 
 
 

@@ -5,6 +5,7 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
+let json2csv = require('json2csv');
 
 // modules for authentication
 let session = require('express-session');
@@ -47,6 +48,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client')));
 
+
 // setup session
 app.use(session({
   secret: "SomeSecret",
@@ -58,7 +60,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(json2csv);
 // route redirects
 app.use('/', index); // top level links
 app.use('/dashboard', dashboard); //dashboard link
