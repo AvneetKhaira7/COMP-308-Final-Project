@@ -1,10 +1,6 @@
 let mongoose = require('mongoose');
-
 // define the response model
 let response = require('../models/response').Response;
-
-
-
 // displays the response page
 module.exports.DisplayViewResponse = (req, res) => {
  response.find({"surveyId" : mongoose.Types.ObjectId(req.params.id) } ,  (err, response) => {
@@ -113,4 +109,25 @@ module.exports.getResponseCount=(req,res)=> {
   
 }
 
-
+module.exports.exportd=(req,res)=> {
+/* Generate automatic model for processing (A static model should be used) */
+ response.find({"surveyId" : mongoose.Types.ObjectId(req.params.id) } ,  (err, responses) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+     let exportData = "";
+                            responses.forEach((ress) => {
+                                let line = "";
+                               // ress.answers.forEach((answer) => {
+                                    line += ress.answer1 + ","+ress.answer2+ ","+ress.answer3+ ","+ress.answer4+ ","+ress.answer5;
+                               // });
+                                line += "\n";
+                                exportData += line;
+                            });
+                            console.log(exportData);
+                            res.type("text/csv").send(exportData);
+    }
+  
+});
+}

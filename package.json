@@ -19,7 +19,7 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0",
     "serve-favicon": "~2.3.0",
-    "json2csv":"~2.0"
+    "mongo-xlsx":"~1.0"
   },
   "engines": {
     "node": ">=6.0.0",
