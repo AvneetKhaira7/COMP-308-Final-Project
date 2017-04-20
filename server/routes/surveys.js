@@ -5,9 +5,11 @@ let router = express.Router();
 // require the survey controller
 let surveyController = require('../controllers/survey');
 let responseController = require('../controllers/response');
+let authController = require('../controllers/users');
+let reqAuth = authController.RequireAuth;
 
 // GET /login - render the home view
-router.get('/home', (req, res, next)=>{
+router.get('/home', reqAuth, (req, res, next)=>{
   surveyController.DisplayAdd(req, res);
   
 }).post('/home', (req, res, next) => { 
@@ -16,12 +18,12 @@ router.get('/home', (req, res, next)=>{
 
 
 // GET /login - render the login view
-router.get('/created', (req, res, next)=>{
+router.get('/created', reqAuth,  (req, res, next)=>{
   surveyController.DisplayCreated(req, res);
   // POST / 
 })
 
-router.get('/editSurvey/:id', (req, res, next) => {
+router.get('/editSurvey/:id', reqAuth,  (req, res, next) => {
    
     surveyController.EditSurvey(req, res);
 }).post('/editSurvey/:id', (req, res, next) => { 
