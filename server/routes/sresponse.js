@@ -14,7 +14,7 @@ router.get('/view', (req, res, next)=>{
 });
 
 
-router.get('/allsurveys', (req, res, next)=>{
+let express = require('express');router.get('/allsurveys', (req, res, next)=>{
 surveyController.ReadSurveyListByUserId(req,res);
 });
 
@@ -26,8 +26,10 @@ router.get('/view/:id', (req, res, next) => {
 
 
 // GET /login - render the created survey
-router.get('/analysis', (req, res, next)=>{
-  responseController.DisplayResponseAnalysis(req, res);
+router.get('/analysis/:id', (req, res, next)=>{
+ // responseController.DisplayResponseAnalysis(req, res);
+  responseController.CountResponseForRating(req, res);
+ 
   // POST 
 });
 

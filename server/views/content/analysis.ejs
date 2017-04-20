@@ -20,6 +20,31 @@
         </ul>
         <% include ../partials/analysiscount.ejs %>
         </div>
+        <div class="ct-chart chartAnalysis"></div>
+<pre><%- analytics %></pre>
+
+<script>
+ 
+let chart = new Chartist.Bar('.ct-chart', {
+  labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
+  series: <%- analytics %>.data
+}, {
+  stackBars: true,
+  axisY: {
+    labelInterpolationFnc: function(value) {
+      console.log(value);
+    //  return (value*<%=response.length %>) ;
+    return(value / 1)
+    }
+  }
+}).on('draw', function(data) {
+  if(data.type === 'bar') {
+    data.element.attr({
+      style: 'stroke-width: 30px'
+    });
+  }
+});
+</script>
       </div>
     </div>
 
