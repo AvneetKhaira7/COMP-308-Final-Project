@@ -27,3 +27,19 @@ module.exports.ReadSurveyListByUserId = (req, res) => {
   });
 }
 
+
+// Read and display the Survey List
+module.exports.ReadSurveyList = (req, res) => {
+  // find all surveys in the surveys collection
+  survey.find( (err, surveys) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+      res.render('content/guestuser', {
+        title: 'Dashboard',
+        results: surveys        
+      });
+    }
+  });
+}

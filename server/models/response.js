@@ -60,9 +60,9 @@ let ResponseSchema = new Schema({
     trim: true    
   }, 
   
-  responseUser:{
+responseUser:{
  type: Schema.Types.ObjectId, 
- ref: 'users'
+ ref: 'users', default:null
   },
   
    created: {

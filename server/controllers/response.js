@@ -45,7 +45,7 @@ module.exports.CreateResponseForShortAnswers = (req, res) => {
       "answer3":req.body.a3,
       "answer4":req.body.a4,
       "answer5":req.body.a5,
-      "responseUser": req.user ? req.user.id : '',
+      "responseUser": req.user ? req.user.id : null
     });
 
     response.create(newResponse, (err, newResponse)=> {
@@ -53,8 +53,13 @@ module.exports.CreateResponseForShortAnswers = (req, res) => {
         console.log(err);
         res.end(err);
       } else {
-        console.log("created")
-        res.redirect('/surveys/created');
+        if(req.user){
+          console.log("created")
+          res.redirect('/surveys/created');          
+        }
+        else{
+          res.redirect('/dashboard/anonymous');
+        }
       }
     });
 }
@@ -72,7 +77,7 @@ module.exports.CreateResponseForRating = (req, res) => {
       "answer3":req.body.optratingq3,
       "answer4":req.body.optratingq4,
       "answer5":req.body.optratingq5,
-      "responseUser": req.user ? req.user.id : '',
+      "responseUser": req.user ? req.user.id : null
     });
 
     response.create(newResponse, (err, newResponse)=> {
@@ -80,8 +85,13 @@ module.exports.CreateResponseForRating = (req, res) => {
         console.log(err);
         res.end(err);
       } else {
-        console.log("created")
-        res.redirect('/surveys/created');
+       if(req.user){
+          console.log("created")
+          res.redirect('/surveys/created');          
+        }
+        else{
+          res.redirect('/dashboard/anonymous');
+        }
       }
     });
 }
