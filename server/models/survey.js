@@ -4,6 +4,7 @@ let Schema = mongoose.Schema; //alias for mongoose Schema
 let passportLocalMongoose = require('passport-local-mongoose');
 
 let SurveySchema = new Schema({
+  
   surveyName: {
     type: String,
     default: '',
@@ -78,7 +79,15 @@ survey_question5:{
   trim: true,
   required: 'Question 5 is required'
 },
-
+survey_availableForAnonymous:{
+  type : Boolean, 
+  required: 'Select if available for anonymous'
+},
+responsecount:{
+  type : Number,
+  default: 0,
+  
+},
 
 },
 {

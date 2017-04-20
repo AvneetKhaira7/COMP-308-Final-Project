@@ -21,7 +21,12 @@ router.get('/created', (req, res, next)=>{
   // POST / 
 })
 
-
+router.get('/editSurvey/:id', (req, res, next) => {
+   
+    surveyController.EditSurvey(req, res);
+}).post('/editSurvey/:id', (req, res, next) => { 
+   surveyController.UpdateSurvey(req,res);
+});
 
 router.get('/details_short/:id', (req, res, next) => {
    

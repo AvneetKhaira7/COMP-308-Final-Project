@@ -1,4 +1,12 @@
-// modules required for routing
+/**
+ * File name: sresponse.js
+ * Authors:  Taranjit Kaur 
+ *           Avneet Kaur
+ * Web link: https://comp308finalprojectgroup8.herokuapp.com/
+ * Description: Defines routes.
+ */
+
+
 let express = require('express');
 let router = express.Router();
 
@@ -22,9 +30,12 @@ router.get('/view/:id', (req, res, next) => {
     responseController.DisplayViewResponse(req, res);
 })
 
-
-
-
+//export data to csv
+router.get('/view/:id/export.csv',(req, res, next)=>{
+  responseController.exportd(req, res);
+  // POST 
+});
+ 
 // GET /login - render the created survey
 router.get('/analysis/:id', (req, res, next)=>{
  // responseController.DisplayResponseAnalysis(req, res);

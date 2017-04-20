@@ -17,6 +17,7 @@
               <th class="text-center">Type</th>
               <th class="text-center">Active</th>
               <th class="text-center">Go To Survey</th>
+              
             </tr>
             <!-- Template Row -->
 
@@ -39,11 +40,11 @@
               </td>
               <td class="text-center">
                <%if(surveys[count].surveyType == '1'){ %>
-              <a href="/surveys/details_short/<%= surveys[count]._id %>" class="btn btn-primary">
+              <a href="/surveys/editSurvey/<%= surveys[count]._id %>" class="btn btn-primary">
               <% }else{ %>
-              <a href="/surveys/details_rating/<%= surveys[count]._id %>" class="btn btn-primary">
+              <a href="/surveys/editSurvey/<%= surveys[count]._id %>" class="btn btn-primary">
               <% } %>
-              <i class="fa fa-pencil-square-o"></i> Take Survey</a>
+              <i class="fa fa-pencil-square-o"></i> Edit Survey</a>
               </td>
             </tr>
             <% } %>

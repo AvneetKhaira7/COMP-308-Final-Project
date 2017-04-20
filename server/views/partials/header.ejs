@@ -29,6 +29,14 @@
     <link href="/Content/css/style.css" rel="stylesheet">
     <link href="/Content/css/style-responsive.css" rel="stylesheet" />
 	<link href="/Content/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
     <!-- =======================================================
         
     ======================================================= -->
@@ -80,13 +88,23 @@
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
-              <ul class="sidebar-menu">                
-                  <li class="active">
+              <ul class="sidebar-menu">   
+              <% if(typeof displayName == 'string' && displayName) { %>                           
+                  <li class="active">                  
                       <a class="" href="/dashboard">
-                          <i class="icon_house_alt"></i>
+                          <i class="fa fa-dashcube"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
+                  <% } else { %>
+                    <li class="active">                  
+                      <a class="" href="/dashboard/anonymous">
+                          <i class="fa fa-dashcube"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <% } %>
+                  <% if(typeof displayName == 'string' && displayName) { %>
                   <li>
                       <a class="" href="/surveys/home">
                           <i class="icon_document_alt"></i>
@@ -95,36 +113,39 @@
                   </li> 
                   <li>
                       <a class="" href="/surveys/created">
-                          <i class="icon_desktop"></i>
+                          <i class="fa fa-bookmark"></i>
                           <span>My Surveys</span>
                       </a>
-                  </li>      
+                  </li> 
+                  <% } %>     
                   <li>
                       <a class="" href="/surveys/tips">
                           <i class="icon_genius"></i>
                           <span>Survey Tips</span>
                       </a>
                   </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
+                  <% if(typeof displayName == 'string' && displayName) { %>
+                   <li>
+                      <a class="" href="/sresponse/allsurveys">
                           <i class="icon_desktop"></i>
-                          <span>Response</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
+                          <span>View Response</span>
                       </a>
-                      <ul class="sub">
-
-                          <li><a class="" href="/sresponse/allsurveys">View Response</a></li>
-                             <li><a class="" href="/sresponse/analysis">Analyze Response</a></li>
-
-                      </ul>
                   </li>
-                  <li>                     
-                      <a class="" href="/contactUs">
-                          <i class="icon_phone"></i>
-                          <span>Contact Us</span>                      
-                      </a>                         
-                  </li>       
-              </ul>
+                  <li>
+                      <a class="" href="/sresponse/analysis">
+                          <i class="fa fa-bar-chart"></i>
+                          <span>Analyze Response</span>
+                      </a>
+                  </li>                  
+                <% }  else{%>
+                    <li>
+                      <a class="" href="/">
+                          <i class="icon_house_alt"></i>
+                          <span>Home</span>
+                      </a>
+                  </li> 
+                <% } %>
+              </ul> 
               <!-- sidebar menu end-->
           </div>
       </aside>
