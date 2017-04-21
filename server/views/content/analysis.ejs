@@ -6,23 +6,17 @@
         <div class="col-md-offset-3 col-md-6">
           <h1><%= title %></h1>
       <h2><%= response[0].surveyName %></h2>
-     
+     <h3> Total Responses: <%= response.length %> </h3>       
+        <div class="ct-chart chartAnalysis"></div>
+        <div >
+          <ul class="legend">
+    <li><span class="rating1"></span> Rating 1</li>
+    <li><span class="rating2"></span> Rating 2</li>
+    <li><span class="rating3"></span> Rating 3</li>
+    <li><span class="rating4"></span> Rating 4</li>
+</ul>
 
         
-        <!--<ul class="list-group">
-        <li class="list-group-item">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurveyModal">Survey 1 from db</button>        
-        </li>
-        <li class="list-group-item">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurveyModal">Survey 2 from db</button>              
-        </li>
-        <li class="list-group-item">
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurveyModal">Survey 3 from db</button>              
-        </li>       
-        </ul>
-        <% include ../partials/analysiscount.ejs %>-->
-        <div class="ct-chart chartAnalysis"></div>
-        </div>
 
 <script>
  
