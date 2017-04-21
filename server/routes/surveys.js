@@ -51,10 +51,6 @@ router.get('/details/:id', (req, res, next) => {
 });
 
 
-
-
-
-
 // GET /login - render the created survey
 router.get('/shortanswers', (req, res, next)=>{
   surveyController.DisplayShortAnswers(req, res);
