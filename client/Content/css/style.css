@@ -9934,6 +9934,16 @@ height:300px;
     font-size:1.5rem;
 }
 
+/* basic positioning */
+.legend { list-style: none; }
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+/* your colors */
+.legend .rating1 { background-color: #d70206; }
+.legend .rating2 { background-color: #f05b4f; }
+.legend .rating3 { background-color: #f4c63d; }
+.legend .rating4 { background-color: #d17905; }       
+
 
 
 /* Add a hover effect if you want */
