@@ -9,9 +9,10 @@
         <br>
         <br>
 
-          <h3></h3>
-           <h4>Total Responses: <%= response.length %> </h3>
-            <h3><a href="<%= response[0].surveyId %>/export.csv" onclick="getExport">Export to CSV</a></h3>
+          <% if(response.length >0){%>
+          <h4>Survey Name: <%= response[0].surveyName %> </h3>
+           <h4>Total Responses: <%= response.length %> </h4>
+            <h5><a href="<%= response[0].surveyId %>/export.csv" onclick="getExport">Export to CSV</a></h5>
 
            
                        <% for (let count = 0; count < response.length; count++) { %>
@@ -60,10 +61,11 @@
                       <label for="a5TextField"> <%=response[count].answer5  %> </label>
                       </li>
                       </ul>
-                     <% } %>
-
+                     <% }} else{ %>
+                    <h4>No responses found</h4>
+                      <% } %>
                   
-           <!-- Redirect to my surveys or Dashboard -->
+           
          
         </div>
       </div>
