@@ -8,6 +8,7 @@
         <br>
         <br>
         <br>
+        <%if(surveys.length>0){ %>
           <h3>Surveys List </h3>
           <br>          
           <table class="table table-bordered table-striped table-hover">
@@ -39,6 +40,8 @@
             <% } %>
             
           </table>
+          <%} else {%>
+          <h3>No surveys found</h3>
         </div>
       </div>
     </div>
