@@ -48,7 +48,7 @@ module.exports.ReadActiveSurveyList= (req, res) => {
 // Read and display the Survey List
 module.exports.ReadSurveyListAnonymous = (req, res) => {
   // find all surveys in the surveys collection
-  survey.find({"survey_availableForAnonymous" : Boolean(true) } , (err, surveys) => {
+  survey.find({"survey_availableForAnonymous" : Boolean(true) ,"survey_active" : Boolean(true)} , (err, surveys) => {
     if (err) {
       return console.error(err);
     }
