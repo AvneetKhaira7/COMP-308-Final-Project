@@ -4,9 +4,11 @@ let router = express.Router();
 
 // require the dashboard controller
 let dashboardController = require('../controllers/dashboard');
+let authController = require('../controllers/users');
+let reqAuth = authController.RequireAuth;
 
 
-router.get('/', (req, res, next)=>{
+router.get('/', reqAuth, (req, res,  next)=>{
   dashboardController.ReadActiveSurveyList(req, res);
   
 })

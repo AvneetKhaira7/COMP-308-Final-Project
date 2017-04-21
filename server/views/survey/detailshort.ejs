@@ -9,8 +9,9 @@
         <br>
         <br>
           <h3>Survey Name: <%= surveys.surveyName %> </h3>
-            <input type="hidden" name="surveyName" value ="<%= surveys.surveyName %>"></input>
+           
            <form class="form" method="post">
+            <input type="hidden" name="surveyn" value ="<%= surveys.surveyName %>"></input>
                       <div class="form-group">
                       <label for="q1TextField" ><%= surveys.survey_question1 %></label>
                       <input type="hidden" name="q1" value="<%= surveys.survey_question1 %>">
