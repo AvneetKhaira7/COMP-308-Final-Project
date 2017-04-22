@@ -32,7 +32,7 @@ survey_AvailableOn: {
   }, 
   survey_ExpiresOn: {
     type: Date,
-    default: Date.now,
+   
     trim: true    
   }, 
   survey_active:{

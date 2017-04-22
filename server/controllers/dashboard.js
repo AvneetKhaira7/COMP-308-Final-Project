@@ -30,7 +30,8 @@ module.exports.ReadSurveyListByUserId = (req, res) => {
 // Read and display the Survey List
 module.exports.ReadActiveSurveyList= (req, res) => {
   // find all surveys in the surveys collection
-  survey.find({"survey_active" : Boolean(true) } , (err, surveys) => {
+  let currentDate = new Date();
+  survey.find({"survey_active" : Boolean(true),"survey_ExpiresOn" : {"$gte":currentDate }} , (err, surveys) => {
     if (err) {
       return console.error(err);
     }
@@ -47,8 +48,9 @@ module.exports.ReadActiveSurveyList= (req, res) => {
 
 // Read and display the Survey List
 module.exports.ReadSurveyListAnonymous = (req, res) => {
-  // find all surveys in the surveys collection
-  survey.find({"survey_availableForAnonymous" : Boolean(true) ,"survey_active" : Boolean(true)} , (err, surveys) => {
+  // find all surveys for anonymous collection
+  let currentDate = new Date();
+  survey.find({"survey_availableForAnonymous" : Boolean(true) ,"survey_active" : Boolean(true),"survey_ExpiresOn" : {"$gte":currentDate }} , (err, surveys) => {
     if (err) {
       return console.error(err);
     }
