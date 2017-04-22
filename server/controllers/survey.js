@@ -65,7 +65,7 @@ module.exports.DisplayAdd = (req, res) => {
 
 // displays the create from scratch page - allowing users to add a new Survey
 module.exports.DisplayCreated = (req, res) => {
-  survey.find(function (err, survey) {
+  survey.find({ "createdBy": mongoose.Types.ObjectId(req.user.id) },function (err, survey) {
         if (err) {
             return console.error(err);
         }
