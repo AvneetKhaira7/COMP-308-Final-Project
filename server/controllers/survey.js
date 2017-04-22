@@ -7,7 +7,9 @@ let survey = require('../models/survey').Survey;
 // Read and display the Survey List
 module.exports.ReadSurveyList = (req, res) => {
   // find all surveys in the surveys collection
-  survey.find( (err, surveys) => {
+  let currentDate = new Date();
+  survey.find().where('survey_ExpiresOn')
+        .gt(currentDate).exec((err, surveys) => {
     if (err) {
       return console.error(err);
     }
