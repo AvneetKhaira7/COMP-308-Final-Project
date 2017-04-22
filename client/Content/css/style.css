@@ -9925,17 +9925,42 @@ span.customSelect.changed {
 }
 .chartAnalysis
 {
-width:400px;
-height:300px;
-
+width:450px;
+height:350px;
+/*background:whitesmoke;*/
+padding:20px;
+border-radius:5%;
 }
+
+.lowerGraph
+{
+margin-top:50px;
+}
+
+
+.margin-fix
+{
+    margin-bottom:100px;
+}
+
+.vertical
+ {-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    float:left;
+    text-align:center;
+ }
 .ct-label 
 {
     font-size:1.5rem;
 }
+.ct-bar
+{
+    stroke-width:30px;
+}
 
 /* basic positioning */
-.legend { list-style: none; }
+.legend { list-style: none; float:left;}
 .legend li { float: left; margin-right: 10px; }
 .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
 /* your colors */
@@ -9943,7 +9968,6 @@ height:300px;
 .legend .rating2 { background-color: #f05b4f; }
 .legend .rating3 { background-color: #f4c63d; }
 .legend .rating4 { background-color: #d17905; }       
-
 
 
 /* Add a hover effect if you want */

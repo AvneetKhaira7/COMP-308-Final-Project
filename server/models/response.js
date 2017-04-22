@@ -21,8 +21,13 @@ let ResponseSchema = new Schema({
     trim: true
   },
   answer1: {
-    type: String,
+    type:String ,
     default: '',
+    trim: true    
+  }, 
+   answer1Nu: {
+    type:Number ,
+    default: 1,
     trim: true    
   }, 
   question2: {
@@ -35,6 +40,11 @@ let ResponseSchema = new Schema({
     default: '',
     trim: true    
   }, 
+  answer2Nu: {
+    type:Number ,
+    default: 1,
+    trim: true    
+  }, 
   question3: {
     type: String,
     default: '',
@@ -43,6 +53,11 @@ let ResponseSchema = new Schema({
   answer3: {
     type: String,
     default: '',
+    trim: true    
+  }, 
+  answer3Nu: {
+    type:Number ,
+    default: 1,
     trim: true    
   }, 
   question4: {
@@ -55,6 +70,11 @@ let ResponseSchema = new Schema({
     default: '',
     trim: true    
   }, 
+  answer4Nu: {
+    type:Number ,
+    default: 1,
+    trim: true    
+  }, 
   question5: {
     type: String,
     default: '',
@@ -65,7 +85,11 @@ let ResponseSchema = new Schema({
     default: '',
     trim: true    
   }, 
-  
+  answer5Nu: {
+    type:Number ,
+    default: 1,
+    trim: true    
+  }, 
 responseUser:{
  type: Schema.Types.ObjectId, 
  ref: 'users', default:null

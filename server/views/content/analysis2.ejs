@@ -1,0 +1,52 @@
+<% include ../partials/header.ejs %>
+
+   <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+ 
+
+        
+<div class=ct-chart>ct</div>
+<script>
+
+let average = <%- responseAvg  %> 
+debugger;
+console.log(average) 
+var chart =  new Chartist.Bar('.ct-chart', {
+  labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+  series: [average[0].avgRating1,6, 120, 200, 180, 20, 10]
+}, {
+  distributeSeries: true
+});
+
+  // plugins: [
+  //                   Chartist.plugins.ctAxisTitle({
+  //                       axisX: {
+  //                           axisTitle: 'Number Of Users',
+  //                           axisClass: 'ct-axis-title',
+  //                           offset: {
+  //                               x: 0,
+  //                               y: 50
+  //                           },
+  //                           textAnchor: 'middle'
+  //                       },
+  //                       axisY: {
+  //                           axisTitle: 'Questions',
+  //                           axisClass: 'ct-axis-title',
+  //                           offset: {
+  //                               x: 0,
+  //                               y: -1
+  //                           },
+  //                           flipTitle: false
+  //                        }
+  //                   })
+  //               ]
+ 
+</script>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
+
+

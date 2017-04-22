@@ -7,14 +7,17 @@
           <h1><%= title %></h1>
       <h2><%= response[0].surveyName %></h2>
      <h3> Total Responses: <%= response.length %> </h3>       
-        <div class="ct-chart chartAnalysis"></div>
-        <div >
+        <div class="ct-chart chartAnalysis"><h4>Number of Users
+     <h4>
+       <br>
           <ul class="legend">
     <li><span class="rating1"></span> Rating 1</li>
     <li><span class="rating2"></span> Rating 2</li>
     <li><span class="rating3"></span> Rating 3</li>
     <li><span class="rating4"></span> Rating 4</li>
 </ul>
+</br>
+</div>
 
         
 
@@ -25,36 +28,15 @@ let chart = new Chartist.Bar('.ct-chart', {
   series: <%- analytics %>.data
 }, {
   stackBars: true,
-  // plugins: [
-  //                   Chartist.plugins.ctAxisTitle({
-  //                       axisX: {
-  //                           axisTitle: 'Number Of Users',
-  //                           axisClass: 'ct-axis-title',
-  //                           offset: {
-  //                               x: 0,
-  //                               y: 50
-  //                           },
-  //                           textAnchor: 'middle'
-  //                       },
-  //                       axisY: {
-  //                           axisTitle: 'Questions',
-  //                           axisClass: 'ct-axis-title',
-  //                           offset: {
-  //                               x: 0,
-  //                               y: -1
-  //                           },
-  //                           flipTitle: false
-  //                        }
-  //                   })
-  //               ]
-  axisY: {
+    axisY: {
 
     labelInterpolationFnc: function(value) {
      // console.log(value);
     //  return (value*<%=response.length %>) ;
     return(value)
     }
-  }
+  },
+ 
 }).on('draw', function(data) {
   if(data.type === 'bar') {
     data.element.attr({
@@ -64,7 +46,27 @@ let chart = new Chartist.Bar('.ct-chart', {
 });
 </script>
       </div>
-    </div>
+<br>
+<br>
+       <div class="col-md-offset-3 col-md-6 lowerGraph">
+ 
+<br>
+   <br> 
+  <br>      
+<div class="ct-chart2 chartAnalysis margin-fix"><h4>
+     Average Rating </h4> <br></div>
+<script>
+
+let average = <%- responseAvg  %> 
+console.log(average) 
+var chart2 =  new Chartist.Bar('.ct-chart2', {
+  labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'],
+  series: [average[0].avgRating1,average[0].avgRating2, average[0].avgRating3, average[0].avgRating4, average[0].avgRating5]
+}, {
+  distributeSeries: true
+});
+    </script>
+      </div></div>
 
 <% include ../partials/footer.ejs %>
 

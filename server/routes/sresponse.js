@@ -23,6 +23,7 @@ router.get('/view', reqAuth, (req, res, next)=>{
 });
 
 
+
 router.get('/allsurveys', reqAuth, (req, res, next)=>{
 surveyController.ReadSurveyListByUserId(req,res);
 });
@@ -45,7 +46,13 @@ router.get('/analysis', reqAuth, (req, res, next)=>{
 // GET /login - render the created survey
 router.get('/analysis/:id', reqAuth, (req, res, next)=>{
  // responseController.DisplayResponseAnalysis(req, res);
-  responseController.CountResponseForRating(req, res);
+  responseController.GraphAnalysisForRating(req, res);
+ 
+  // POST 
+});
+router.get('/analysis2/:id', reqAuth, (req, res, next)=>{
+ // responseController.DisplayResponseAnalysis(req, res);
+  responseController.AverageRating(req, res);
  
   // POST 
 });
